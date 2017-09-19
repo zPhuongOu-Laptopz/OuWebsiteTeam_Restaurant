@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" />
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <script src="~/Content/assets/js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="col-md-2 a">
+        <img src="~/Content/assets/imgs/icons/logo.png" alt="logo.png">
+
+        <div class="row menu">
+            <ul>
+                <li class="active"><span class="glyphicon glyphicon-home"></span><a href="#">Trang chủ</a></li>
+                <li><span class="glyphicon glyphicon-info-sign"></span><a href="#">Giới thiệu</a></li>
+                <li><span class="glyphicon glyphicon-cutlery"></span><a href="#">Điểm tâm sáng</a></li>
+                <li><span class="glyphicon glyphicon-cutlery"></span><a href="#">Bữa trưa</a></li>
+                <li><span class="glyphicon glyphicon-cutlery"></span><a href="#">Ăn tối</a></li>
+                <li><span class="glyphicon glyphicon-earphone"></span><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+
+        <div class="row info">
+            <ul>
+                <li>
+                    <div class="col-md-1">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    </div>
+                    <div class="col-md-9 col-md-offset-1">
+                        <p><a href="#">440 Nguyễn Văn Công</a></p>
+                        <p class="time">P6, Quận Gò Vấp</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-1">
+                        <span class="glyphicon glyphicon-phone"></span>
+                    </div>
+                    <div class="col-md-9 col-md-offset-1 ">
+                        <p><a href="#">0126-565-5532</a></p>
+                        <p class="time">Mon-Sun:9:00 - 18:00</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row social">
+            <ul>
+                <li><a href="#"><img src="~/Content/assets/imgs/icons/facebook.png" alt="facebook.png"></a></li>
+                <li><a href="#"><img src="~/Content/assets/imgs/icons/twitter.png" alt="twitter.jpg"></a></li>
+                <li><a href="#"><img src="~/Content/assets/imgs/icons/instagram.png" alt="google.png"></a></li>
+                <li><a href="#"><img src="~/Content/assets/imgs/icons/youtube.png" alt="youtube.png"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-10 b">
+        @RenderBody()
+
+        <!-- Footer -->
+        <div class="row footer">
+            <div class="col-md-3">
+                <h4><strong>Breakfast</strong></h4>
+                <ul class="list-group">
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Morbi leo risus</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Vestibulum at eros</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4><strong>Lunch</strong></h4>
+                <ul class="list-group">
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Morbi leo risus</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Vestibulum at eros</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4><strong>Dinner</strong></h4>
+                <ul class="list-group">
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Morbi leo risus</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Vestibulum at eros</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4><strong>Service</strong></h4>
+                <ul class="list-group">
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Morbi leo risus</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Vestibulum at eros</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row footer-info">
+            <div class="col-md-12">
+                <p>Thông tin</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
