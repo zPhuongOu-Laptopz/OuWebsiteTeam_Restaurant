@@ -71,6 +71,7 @@
     <Compile Include="DBContext\PdbUser.cs" />
     <Compile Include="DBContext\RestaurantDBContext.cs" />
     <Compile Include="InterfaceEx\Module\ICategories.cs" />
+    <Compile Include="InterfaceEx\Module\IFoods.cs" />
     <Compile Include="InterfaceEx\Module\IRestaurantInfo.cs" />
     <Compile Include="Migrations\201709191511565_InitialCreate_RestaurantDB.cs" />
     <Compile Include="Migrations\201709191511565_InitialCreate_RestaurantDB.Designer.cs">
@@ -78,11 +79,12 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Categories.cs" />
+    <Compile Include="Models\Module\Foods.cs" />
     <Compile Include="Models\Module\RestaurantInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HTMLCode\" />
+    <Folder Include="HTMLCode\Label\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

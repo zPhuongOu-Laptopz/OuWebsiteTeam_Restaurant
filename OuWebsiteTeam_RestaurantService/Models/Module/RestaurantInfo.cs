@@ -24,7 +24,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
 
         public bool Delete(Guid id)
         {
-            PdbRestaurant res = _context.PdbRestaurants.SingleOrDefault(res1 => res1.ID == id);
+            PdbRestaurant res = _context.PdbRestaurants.SingleOrDefault(item => item.ID == id);
             _context.PdbRestaurants.DefaultIfEmpty(res);
             _context.Entry(res).State = System.Data.Entity.EntityState.Deleted;
             return _context.SaveChanges() == 1;
