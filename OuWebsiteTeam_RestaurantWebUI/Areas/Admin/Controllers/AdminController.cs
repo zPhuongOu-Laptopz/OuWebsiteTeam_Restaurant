@@ -11,6 +11,7 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
         // GET: Admin/Admin
         public ActionResult Index()
         {
+            ViewBag.Phuongdeptrai = "Phuongdeptrai";
             return View();
         }
     }
