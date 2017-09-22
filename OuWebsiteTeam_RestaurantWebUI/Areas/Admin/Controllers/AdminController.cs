@@ -12,6 +12,7 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
         public ActionResult Index()
         {
             ViewBag.Phuongdeptrai = "Phuongdeptrai";
+            ViewData["huycho"] = "HuyCho";
             return View();
         }
     }
