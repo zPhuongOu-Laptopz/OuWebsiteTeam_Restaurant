@@ -15,5 +15,9 @@ namespace OuWebsiteTeam_RestaurantService.InterfaceEx.Module
         bool Edit(PdbFood cate);
         bool Delete(Guid id);
         PdbFood GetOne(Guid id);
+
+        IEnumerable<PdbFood> GetForIndex();
+
+        PdbFood GetOneBestSale(Guid id); 
     }
 }

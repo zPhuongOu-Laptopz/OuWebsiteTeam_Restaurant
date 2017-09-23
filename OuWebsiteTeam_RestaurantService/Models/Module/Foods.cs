@@ -4,7 +4,6 @@ using System.Linq;
 using OuWebsiteTeam_RestaurantService.DBContext;
 using OuWebsiteTeam_RestaurantService.InterfaceEx.Module;
 
-
 namespace OuWebsiteTeam_RestaurantService.Models.Module {
     public class Foods : IFoods {
         private readonly RestaurantDBContext _context;
@@ -36,8 +35,17 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module {
             return _context.PdbFoods;
         }
 
+        public IEnumerable<PdbFood> GetForIndex () {
+            return _context.PdbFoods.OrderBy(item=>item.ID).Take(6);
+        }
+
         public PdbFood GetOne (Guid id) {
             return _context.PdbFoods.SingleOrDefault (item => item.ID == id);
+        }
+
+        public PdbFood GetOneBestSale(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
