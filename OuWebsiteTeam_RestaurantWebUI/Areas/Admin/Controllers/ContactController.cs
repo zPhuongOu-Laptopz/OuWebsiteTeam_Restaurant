@@ -6,20 +6,20 @@ using System.Web.Mvc;
 
 namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
 {
-    public class AdminController : Controller
+    public class ContactController : Controller
     {
-        // GET: Admin/Admin
-        public ActionResult Index()
+        // GET: Admin/Contact
+        public ActionResult Add()
         {
             return View();
         }
 
-        public ActionResult AddCategory()
+        public ActionResult Update()
         {
             return View();
         }
 
-        public ActionResult AddInfo()
+        public ActionResult List()
         {
             return View();
         }
