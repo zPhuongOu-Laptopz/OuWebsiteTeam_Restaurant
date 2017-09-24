@@ -39,6 +39,9 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         [Column(TypeName = "datetime2")]
         public DateTime? ModifiedDate { get; set; }
 
+        [Column(TypeName = "datetime2")]
+        public DateTime OutDate { get; set; }
+
         public Guid? Modifedby { get; set; }
 
         public bool? IsDisplay { get; set; }

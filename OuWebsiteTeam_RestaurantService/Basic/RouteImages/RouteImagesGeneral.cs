@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace OuWebsiteTeam_RestaurantService.Basic.RouteImages
 {
-    class RouteImagesGeneral
+    public class RouteImagesGeneral
     {
+        private string RouteGeneral = "";
+
+        public string RouteImagesPNGs(string imagename)
+        {
+            return RouteGeneral + "/" + imagename;
+        }
     }
 }

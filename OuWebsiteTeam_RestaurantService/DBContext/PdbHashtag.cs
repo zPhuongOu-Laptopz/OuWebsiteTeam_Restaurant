@@ -1,4 +1,4 @@
-namespace OuWebsiteTeam_RestaurantService.DBContext
+﻿namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,11 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         public Guid ID { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên")]
         public string Name { get; set; }
 
         [StringLength(10)]
+        [Display(Name = "Kích hoạt")]
         public string IsStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

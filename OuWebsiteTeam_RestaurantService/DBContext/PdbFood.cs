@@ -1,10 +1,9 @@
-namespace OuWebsiteTeam_RestaurantService.DBContext
+﻿namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class PdbFood
     {
@@ -20,17 +19,27 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         [Required]
         [StringLength(100)]
+        [Display(Name ="Tên món ăn")]
         public string NameFood { get; set; }
 
         [Required]
         [StringLength(100)]
+        [Display(Name = "Mô tả")]
         public string Decriptions { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Giá cỡ Lớn")]
         public decimal? PriceBigSize { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Giá cỡ Nhỏ")]
         public decimal? PriceSmallSize { get; set; }
+
+        [Column(TypeName = "money")]
+        public decimal? PriceDiscountForSmallSize { get; set; }
+
+        [Column(TypeName = "money")]
+        public decimal? PriceDiscountForBigSize { get; set; }
 
         [Column(TypeName = "datetime2")]
         public DateTime CreatedDate { get; set; }
@@ -42,17 +51,7 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         public Guid? Modifedby { get; set; }
 
-        public bool? IsDiscountforBigZize { get; set; }
-
-        public bool? IsDiscountfotSmallSize { get; set; }
-
-        public bool IsBigSize { get; set; }
-
-        public bool IsSmallSize { get; set; }
-
         public bool IsStatus { get; set; }
-
-        public bool IsBestSale { get; set; }
 
         public bool IsAllowOrder { get; set; }
 

@@ -26,5 +26,7 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         public DateTime? ModifiedDate { get; set; }
 
         public Guid? Modifedby { get; set; }
+
+        public bool isStatus { get; set; }
     }
 }

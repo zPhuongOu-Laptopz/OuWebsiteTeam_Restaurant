@@ -1,10 +1,8 @@
-namespace OuWebsiteTeam_RestaurantService.DBContext
+﻿namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class PdbCategory
     {
@@ -12,8 +10,10 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên Danh Mục")]
         public string Name { get; set; }
 
+        [Display(Name = "Kích hoạt")]
         public bool IsStatus { get; set; }
 
         [Column(TypeName = "datetime2")]
@@ -26,10 +26,12 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         public Guid? Modifedby { get; set; }
 
+        [Display(Name = "Thứ tự")]
         public int Filter { get; set; }
 
         [Required]
         [StringLength(100)]
+        [Display(Name = "Hình Icon")]
         public string HtmlIcon { get; set; }
     }
 }
