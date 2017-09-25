@@ -91,6 +91,10 @@
     <Compile Include="Migrations\201709251241137_Update_Table_v1.2_Foods.Designer.cs">
       <DependentUpon>201709251241137_Update_Table_v1.2_Foods.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709251300393_Update_Table_v1.3_Foods.cs" />
+    <Compile Include="Migrations\201709251300393_Update_Table_v1.3_Foods.Designer.cs">
+      <DependentUpon>201709251300393_Update_Table_v1.3_Foods.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Banners.cs" />
     <Compile Include="Models\Module\Categories.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709251241137_Update_Table_v1.2_Foods.resx">
       <DependentUpon>201709251241137_Update_Table_v1.2_Foods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709251300393_Update_Table_v1.3_Foods.resx">
+      <DependentUpon>201709251300393_Update_Table_v1.3_Foods.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

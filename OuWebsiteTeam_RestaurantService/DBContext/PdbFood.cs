@@ -39,17 +39,17 @@
 
         [Display(Name = "Phần trăm giảm giá (lớn)")]
         [Required(ErrorMessage = "Nhập phần trăm giảm giá")]
-        public int PercentDiscountForSmallSize { get; set; }
+        public int PercentDiscountForBigSize { get; set; }
 
         [Display(Name = "Phần trăm giảm giá (nhỏ)")]
         [Required(ErrorMessage = "Nhập phần trăm giảm giá")]
-        public int PercentDiscountForBigSize { get; set; }
-
-        [Column(TypeName = "money")]
-        public decimal? PersenDiscountForSmallSize { get; set; }
+        public int PercentDiscountForSmallSize { get; set; }
 
         [Column(TypeName = "money")]
         public decimal? PriceDiscountForBigSize { get; set; }
+
+        [Column(TypeName = "money")]
+        public decimal? PriceDiscountForSmallSize { get; set; }
 
         [Column(TypeName = "datetime2")]
         public DateTime CreatedDate { get; set; }
