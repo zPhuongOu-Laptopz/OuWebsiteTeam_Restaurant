@@ -12,31 +12,21 @@
     <!--Mobile first-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
-    <link href="~/Content/assets/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
-    <link href="~/Content/assets/admin/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Metis core stylesheet -->
-    <link href="~/Content/assets/admin/css/main.min.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/main.min.css" rel="stylesheet" />
     <!-- metisMenu stylesheet -->
-    <link href="~/Content/assets/admin/css/metisMenu.min.css" rel="stylesheet" />
-    <link href="~/Content/assets/admin/css/jasny-bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/assets/admin/css/chosen.min.css" rel="stylesheet" />
-    <script>
-      less = {
-          env: "development",
-        relativeUrls: false,
-        rootpath: "Content/admin/"
-      };
-    </script>
-    <link href="~/Content/assets/admin/css/style-switcher.css" rel="stylesheet" />
-    <link href="~/Content/assets/admin/css/theme.css" rel="stylesheet" />
-
-    <script src="~/Content/assets/admin/js/less-1.7.5.min.js"></script>
-    <!--Modernizr 2.8.2-->
-    <script src="~/Content/assets/admin/js/modernizr.min.js"></script>
+    <link href="/Content/assets/admin/css/metisMenu.min.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/jasny-bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/chosen.min.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/style-switcher.css" rel="stylesheet" />
+    <link href="/Content/assets/admin/css/theme.css" rel="stylesheet" />
 </head>
 <body class=" ">
     <div class="bg-dark dk" id="wrap">
+        <!-- Top -->
         <div id="top">
             <!-- .navbar -->
             <nav class="navbar navbar-inverse navbar-static-top">
@@ -50,7 +40,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a href="@Url.Action("Home","AdminPage")" class="navbar-brand">
-                            <img src="~/Data/admin/logo.png" alt="logo.png" />
+                            <img src="/Data/admin/logo.png" alt="logo.png" />
                         </a>
                     </header>
                     <div class="topnav">
@@ -127,7 +117,8 @@
                 </div><!-- /.main-bar -->
             </header><!-- /.head -->
         </div><!-- /#top -->
-
+        
+        <!-- Left -->
         <div id="left">
             <div class="media user-media bg-dark dker">
                 <div class="user-media-toggleHover">
@@ -135,7 +126,7 @@
                 </div>
                 <div class="user-wrapper bg-dark">
                     <a class="user-link" href="">
-                        <img class="media-object img-thumbnail user-img" alt="User Picture" src="~/Data/icon/user.png">
+                        <img class="media-object img-thumbnail user-img" alt="User Picture" src="/Data/icon/user.png">
                         <span class="label label-danger user-label">16</span>
                     </a>
                     <div class="media-body">
@@ -235,18 +226,18 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="@Url.Action("Category","AdminPage")">
-                                <i class="fa fa-angle-right"></i>&nbsp; Quản lý danh mục
+                            <a href="@Url.Action("Test","Admin")">
+                                <i class="fa fa-angle-right"></i>&nbsp; Test
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Product","AdminPage")">
-                                <i class="fa fa-angle-right"></i>&nbsp; Quản lý sản phẩm
+                            <a href="@Url.Action("Test1","Admin")">
+                                <i class="fa fa-angle-right"></i>&nbsp; Test1
                             </a>
                         </li>
                         <li>
-                            <a href="form-wysiwyg.html">
-                                <i class="fa fa-angle-right"></i>&nbsp; Form WYSIWYG
+                            <a href="@Url.Action("Test2","Admin")">
+                                <i class="fa fa-angle-right"></i>&nbsp; Test2
                             </a>
                         </li>
                     </ul>
@@ -398,11 +389,13 @@
                 </li>
             </ul><!-- /#menu -->
         </div><!-- /#left -->
-
+        
+        <!-- Content -->
         <div id="content">
             @RenderBody()
         </div><!-- Content -->
 
+        <!-- Right -->
         <div id="right" class="bg-light lter">
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -463,9 +456,12 @@
             </div>
         </div><!-- /#right -->
     </div><!-- /#wrap -->
+
+    <!-- Footer -->
     <footer class="Footer bg-dark dker">
         <p>2014 &copy; Metis Bootstrap Admin Template</p>
     </footer><!-- /#footer -->
+
     <!-- #helpModal -->
     <div id="helpModal" class="modal fade">
         <div class="modal-dialog">
@@ -486,26 +482,35 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal --><!-- /#helpModal -->
+
     <!--jQuery 2.1.1 -->
-    <script src="~/Content/assets/admin/js/jquery.min.js"></script>
+    <script src="/Content/assets/admin/js/jquery.min.js"></script>
+    <!-- less-1.7.5 -->
+    <script src="/Content/assets/admin/js/less-1.7.5.min.js"></script>
+    <!--Modernizr 2.8.2-->
+    <script src="/Content/assets/admin/js/modernizr.min.js"></script>
     <!--Bootstrap -->
-    <script src="~/Content/assets/admin/js/bootstrap.min.js"></script>
+    <script src="/Content/assets/admin/js/bootstrap.min.js"></script>
     <!-- MetisMenu -->
-    <script src="~/Content/assets/admin/js/metisMenu.min.js"></script>
+    <script src="/Content/assets/admin/js/metisMenu.min.js"></script>
     <!-- Screenfull -->
-    <script src="~/Content/assets/admin/js/screenfull.js"></script>
+    <script src="/Content/assets/admin/js/screenfull.js"></script>
     <!-- Form Upload Anh -->
-    <script src="~/Content/assets/admin/js/jquery.form.wizard.js"></script>
-    <script src="~/Content/assets/admin/js/jasny-bootstrap.min.js"></script>
+    <script src="/Content/assets/admin/js/jquery.form.wizard.js"></script>
+    <script src="/Content/assets/admin/js/jasny-bootstrap.min.js"></script>
     <!-- Form Select -->
-    <script src="~/Content/assets/admin/js/jquery.inputlimiter.js"></script>
-    <script src="~/Content/assets/admin/js/chosen.jquery.min.js"></script>
-    <script src="~/Content/assets/admin/js/jquery.autosize.min.js"></script>
-    <script src="~/Content/assets/admin/js/jquery.tagsinput.js"></script>
+    <script src="/Content/assets/admin/js/jquery.inputlimiter.js"></script>
+    <script src="/Content/assets/admin/js/chosen.jquery.min.js"></script>
+    <script src="/Content/assets/admin/js/jquery.autosize.min.js"></script>
+    <script src="/Content/assets/admin/js/jquery.tagsinput.js"></script>
     <!-- Metis core scripts -->
-    <script src="~/Content/assets/admin/js/core.min.js"></script>
+    <script src="/Content/assets/admin/js/core.min.js"></script>
     <!-- Metis demo scripts -->
-    <script src="~/Content/assets/admin/js/app.min.js"></script>
-    <script src="~/Content/assets/admin/js/style-switcher.min.js"></script>
+    <script src="/Content/assets/admin/js/app.min.js"></script>
+    <script src="/Content/assets/admin/js/style-switcher.min.js"></script>
+    <!-- CKFinder -->
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckfinder/ckfinder.js"></script>
+    @RenderSection("jsFooter", required: false)
 </body>
 </html>

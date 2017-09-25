@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "Test2";
+    Layout = "~/Areas/Admin/Views/Layout/Layout.cshtml";
+}
+
+<div class="outer">
+    <div class="inner bg-light lter">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <header>
+                        <h5>Thêm tài khoản</h5>
+                    </header>
+                    <div id="div-2" class="body">
+                        <div class="col-md-6">
+                            <form id="wizardForm" method="post" action="" class="form-horizontal wizardForm">
+                                <fieldset class="step" id="last">
+                                    <div class="clearfix"></div>
+                                    <!-- Frist Name -->
+                                    <div class="form-group">
+                                        <label for="firstname" class="control-label col-lg-4">Tài khoản</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" name="firstname" id="firstname" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- Last Name -->
+                                    <div class="form-group">
+                                        <label for="lastname" class="control-label col-lg-4">Mật khẩu</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" name="lastname" id="lastname" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- Gender -->
+                                    <div class="form-group">
+                                        <label for="gender" class="control-label col-lg-4">Nhập lại mật khẩu</label>
+                                        <div class="col-lg-8">
+                                            <input type="radio" value="1" name="gender" />Nam
+                                            <input type="radio" value="2" name="gender" />Nữ
+                                        </div>
+                                    </div>
+                                    <!-- Birthday -->
+                                    <div class="form-group">
+                                        <label for="birthday" class="control-label col-lg-4">Ảnh đại diện</label>
+                                        <div class="col-lg-8">
+                                            <select id="birthday">
+                                                <option>day</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                            <select id="birthday">
+                                                <option>month</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                            <select id="birthday">
+                                                <option>year</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Address -->
+                                    <div class="form-group">
+                                        <label for="address" class="control-label col-lg-4">Loại tài khoản</label>
+                                        <div class="col-lg-8">
+                                            <textarea id="address"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                        <label for="email" class="control-label col-lg-4">Cấp cho nhân viên</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" name="email" id="email" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                        <label for="pass2" class="control-label col-lg-4">Cấp cho nhân viên</label>
+                                        <div class="col-lg-8">
+                                            <select multiple>
+                                                <option>Nguyễn Quốc Huy</option>
+                                                <option>Nguyễn Hoàng Phương</option>
+                                                <option>Nguyễn Ngọc Phương</option>
+                                                <option>David Beckham</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- CMND -->
+                                    <div class="form-group">
+                                        <label for="pass2" class="control-label col-lg-4">Cấp cho nhân viên</label>
+                                        <div class="col-lg-8">
+                                            <select multiple>
+                                                <option>Nguyễn Quốc Huy</option>
+                                                <option>Nguyễn Hoàng Phương</option>
+                                                <option>Nguyễn Ngọc Phương</option>
+                                                <option>David Beckham</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Phone -->
+                                    <div class="form-group">
+                                        <div class="col-lg-8 col-lg-offset-4">
+                                            <input class="btn" type="submit" value="Thêm tài khoản" />
+                                        </div>
+                                    </div>
+                                    <!-- Position -->
+                                    <div class="form-group">
+                                        <label for="pass2" class="control-label col-lg-4">Cấp cho nhân viên</label>
+                                        <div class="col-lg-8">
+                                            <select multiple>
+                                                <option>Nguyễn Quốc Huy</option>
+                                                <option>Nguyễn Hoàng Phương</option>
+                                                <option>Nguyễn Ngọc Phương</option>
+                                                <option>David Beckham</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="form-actions">
+                                    <input class="navigation_button btn" id="back" value="Back" type="reset" />
+                                    <input class="navigation_button btn btn-primary" id="next" value="Next" type="submit" />
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-md-6">
+                            <table class="table table-striped sortableTable responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            #
+                                            <i class="fa sort"></i>
+                                        </th>
+                                        <th>
+                                            Tên nhân viên
+                                            <i class="fa sort"></i>
+                                        </th>
+                                        <th>
+                                            Ngày Sinh
+                                            <i class="fa sort"></i>
+                                        </th>
+                                        <th>
+                                            Giới tính
+                                            <i class="fa sort"></i>
+                                        </th>
+                                        <th>
+                                            Chức vụ
+                                            <i class="fa sort"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Nguyễn Quốc Huy</td>
+                                        <td>30/10/96</td>
+                                        <td>Nam</td>
+                                        <td>Giám đốc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Nguyễn Hoàng Phương</td>
+                                        <td>30/10/96</td>
+                                        <td>Nam</td>
+                                        <td>Bảo vệ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Nguyễn Ngọc Phương</td>
+                                        <td>30/10/96</td>
+                                        <td>Nam</td>
+                                        <td>Lao công</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>David Beckham</td>
+                                        <td>30/10/96</td>
+                                        <td>Nam</td>
+                                        <td>Giữ xe</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="data"></div>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.inner -->
+</div><!-- /.outer -->
+
+

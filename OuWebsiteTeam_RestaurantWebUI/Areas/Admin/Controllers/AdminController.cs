@@ -14,12 +14,17 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult AddCategory()
+        public ActionResult Test()
         {
             return View();
         }
 
-        public ActionResult AddInfo()
+        public ActionResult Test1()
+        {
+            return View();
+        }
+
+        public ActionResult Test2()
         {
             return View();
         }
