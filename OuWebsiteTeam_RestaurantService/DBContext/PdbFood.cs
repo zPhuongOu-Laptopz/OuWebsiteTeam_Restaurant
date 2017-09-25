@@ -19,7 +19,7 @@
 
         [Required]
         [StringLength(100)]
-        [Display(Name ="Tên món ăn")]
+        [Display(Name = "Tên món ăn")]
         public string NameFood { get; set; }
 
         [Required]
@@ -29,14 +29,24 @@
 
         [Column(TypeName = "money")]
         [Display(Name = "Giá cỡ Lớn")]
+        [Required(ErrorMessage = "Nhập giá")]
         public decimal? PriceBigSize { get; set; }
 
         [Column(TypeName = "money")]
         [Display(Name = "Giá cỡ Nhỏ")]
+        [Required(ErrorMessage = "Nhập giá")]
         public decimal? PriceSmallSize { get; set; }
 
+        [Display(Name = "Phần trăm giảm giá (lớn)")]
+        [Required(ErrorMessage = "Nhập phần trăm giảm giá")]
+        public int PercentDiscountForSmallSize { get; set; }
+
+        [Display(Name = "Phần trăm giảm giá (nhỏ)")]
+        [Required(ErrorMessage = "Nhập phần trăm giảm giá")]
+        public int PercentDiscountForBigSize { get; set; }
+
         [Column(TypeName = "money")]
-        public decimal? PriceDiscountForSmallSize { get; set; }
+        public decimal? PersenDiscountForSmallSize { get; set; }
 
         [Column(TypeName = "money")]
         public decimal? PriceDiscountForBigSize { get; set; }
@@ -51,14 +61,19 @@
 
         public Guid? Modifedby { get; set; }
 
+        [Display(Name = "Kích hoạt")]
         public bool IsStatus { get; set; }
 
+        [Display(Name = "Cho phép đặt hàng")]
         public bool IsAllowOrder { get; set; }
 
+        [Display(Name = "Sản phẩm hot")]
         public bool IsHot { get; set; }
 
+        [Required]
         public int ViewCount { get; set; }
 
+        [Required]
         public int BuyCount { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
