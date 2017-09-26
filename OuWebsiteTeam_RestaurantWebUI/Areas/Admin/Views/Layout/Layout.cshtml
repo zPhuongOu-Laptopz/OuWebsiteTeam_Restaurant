@@ -39,8 +39,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="@Url.Action("Home","AdminPage")" class="navbar-brand">
-                            <img src="/Data/admin/logo.png" alt="logo.png" />
+                        <a href="@Url.Action("Home","AdminPage")" class="navbar-brand" style="background:white;">
+                            <img src="~/Content/assets/imgs/icons/logo.png" />
                         </a>
                     </header>
                     <div class="topnav">
@@ -51,15 +51,18 @@
                         </div>
                         <div class="btn-group">
                             <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-default btn-sm">
-                                <i class="fa fa-envelope"></i>
+                                <!--<i class="fa fa-envelope"></i>-->
+                                <span class="glyphicon glyphicon-envelope"></span>
                                 <span class="label label-warning">5</span>
                             </a>
                             <a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip" class="btn btn-default btn-sm">
-                                <i class="fa fa-comments"></i>
+                                <!--<i class="fa fa-comments"></i>-->
+                                <span class="glyphicon glyphicon-comment"></span>
                                 <span class="label label-danger">4</span>
                             </a>
                             <a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm" href="#helpModal">
-                                <i class="fa fa-question"></i>
+                                <!--<i class="fa fa-question"></i>-->
+                                <span class="glyphicon glyphicon-question-sign"></span>
                             </a>
                         </div>
                         <div class="btn-group">
@@ -104,7 +107,8 @@
                             <input type="text" class="form-control" placeholder="Live Search ...">
                             <span class="input-group-btn">
                                 <button class="btn btn-primary btn-sm text-muted" type="button">
-                                    <i class="fa fa-search"></i>
+                                    <!-- <i class="fa fa-search"></i>-->
+                                    <span class="glyphicon glyphicon-search"></span>
                                 </button>
                             </span>
                         </div>
@@ -112,7 +116,9 @@
                 </div><!-- /.search-bar -->
                 <div class="main-bar">
                     <h3>
-                        <i class="fa fa-home"></i>&nbsp; Metis
+                        <!--<i class="fa fa-home"></i>-->
+                        <span class="glyphicon glyphicon-home"></span>
+                        &nbsp; Metis
                     </h3>
                 </div><!-- /.main-bar -->
             </header><!-- /.head -->
@@ -151,13 +157,16 @@
                 <li class="nav-divider"></li>
                 <li class="">
                     <a href="@Url.Action("Index" , "Admin")">
-                        <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span>
+                        <!-- <i class="fa fa-dashboard"></i> -->
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="link-title">&nbsp; Dashboard</span>
                     </a>
                 </li>
                 <li class="">
                     <a href="javascript:;">
-                        <i class="fa fa-pencil"></i>
-                        <span class="link-title">Forms</span>
+                        <!--<i class="fa fa-pencil"></i>-->
+                        <span class="glyphicon glyphicon-edit"></span>
+                        <span class="link-title">&nbsp; Forms</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul>
@@ -220,9 +229,11 @@
                 </li>
                 <li>
                     <a href="javascript:;">
-                        <i class="fa fa-table"></i>
-                        <span class="link-title">Tables</span>
+                        <!-- <i class="fa fa-table"></i> -->
+                        <span class="glyphicon glyphicon-list"></span>
+                        <span class="link-title">&nbsp; Tables</span>
                         <span class="fa arrow"></span>
+                        
                     </a>
                     <ul>
                         <li>
@@ -244,40 +255,46 @@
                 </li>
                 <li>
                     <a href="file.html">
-                        <i class="fa fa-file"></i>
+                        <!--<i class="fa fa-file"></i>-->
+                        <span class="glyphicon glyphicon-folder-open"></span>
                         <span class="link-title">
-                            File Manager
+                            &nbsp; File Manager
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="maps.html">
-                        <i class="fa fa-map-marker"></i><span class="link-title">
-                            Maps
+                        <!--<i class="fa fa-map-marker"></i>-->
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                        <span class="link-title">
+                            &nbsp; Maps
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="chart.html">
-                        <i class="fa fa fa-bar-chart-o"></i>
+                        <!--<i class="fa fa fa-bar-chart-o"></i>-->
+                        <span class="glyphicon glyphicon-stats"></span>
                         <span class="link-title">
-                            Charts
+                            &nbsp; Charts
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="calendar.html">
-                        <i class="fa fa-calendar"></i>
+                        <!--<i class="fa fa-calendar"></i>-->
+                        <span class="glyphicon glyphicon-calendar"></span>
                         <span class="link-title">
-                            Calendar
+                            &nbsp; Calendar
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:;">
-                        <i class="fa fa-exclamation-triangle"></i>
+                        <!--<i class="fa fa-exclamation-triangle"></i>-->
+                        <span class="glyphicon glyphicon-info-sign"></span>
                         <span class="link-title">
-                            Error Pages
+                            &nbsp; Error Pages
                         </span>
                         <span class="fa arrow"></span>
                     </a>
@@ -321,9 +338,10 @@
                 </li>
                 <li>
                     <a href="blank.html">
-                        <i class="fa fa-square-o"></i>
+                        <!-- <i class="fa fa-square-o"></i>-->
+                        <span class="glyphicon glyphicon-info-sign"></span>
                         <span class="link-title">
-                            Blank Page
+                            &nbsp; Blank Page
                         </span>
                     </a>
                 </li>
