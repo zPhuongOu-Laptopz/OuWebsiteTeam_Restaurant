@@ -1,4 +1,4 @@
-namespace OuWebsiteTeam_RestaurantService.DBContext
+﻿namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
     using System.Collections.Generic;
@@ -12,14 +12,17 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên")]
         public string Name { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Kiểu")]
         public string Type { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Giá trị")]
         public string Value { get; set; }
     }
 }

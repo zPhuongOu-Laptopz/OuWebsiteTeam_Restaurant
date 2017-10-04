@@ -46,6 +46,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreatedBy = c.Guid(nullable: false),
                         ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
+                        OutDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         Modifedby = c.Guid(),
                         IsDisplay = c.Boolean(),
                         IsStatus = c.Boolean(),
@@ -74,18 +75,17 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         ID = c.Guid(nullable: false),
                         NameFood = c.String(nullable: false, maxLength: 100),
                         Decriptions = c.String(nullable: false, maxLength: 100),
-                        PriceBigSize = c.Decimal(storeType: "money"),
-                        PriceSmallSize = c.Decimal(storeType: "money"),
+                        PriceBigSize = c.Decimal(nullable: false, storeType: "money"),
+                        PriceSmallSize = c.Decimal(nullable: false, storeType: "money"),
+                        PercentDiscountForBigSize = c.Int(nullable: false),
+                        PercentDiscountForSmallSize = c.Int(nullable: false),
+                        PriceDiscountForBigSize = c.Decimal(storeType: "money"),
+                        PriceDiscountForSmallSize = c.Decimal(storeType: "money"),
                         CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreatedBy = c.Guid(nullable: false),
                         ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
                         Modifedby = c.Guid(),
-                        IsDiscountforBigZize = c.Boolean(),
-                        IsDiscountfotSmallSize = c.Boolean(),
-                        IsBigSize = c.Boolean(nullable: false),
-                        IsSmallSize = c.Boolean(nullable: false),
                         IsStatus = c.Boolean(nullable: false),
-                        IsBestSale = c.Boolean(nullable: false),
                         IsAllowOrder = c.Boolean(nullable: false),
                         IsHot = c.Boolean(nullable: false),
                         ViewCount = c.Int(nullable: false),
@@ -166,6 +166,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         CreatedBy = c.Guid(nullable: false),
                         ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
                         Modifedby = c.Guid(),
+                        isStatus = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -180,7 +181,6 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         Message = c.String(),
                         Email = c.String(maxLength: 100),
                         Phone = c.String(maxLength: 15, fixedLength: true),
-                        NumberStar2 = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             

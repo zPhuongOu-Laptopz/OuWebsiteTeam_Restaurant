@@ -79,21 +79,9 @@
     <Compile Include="InterfaceEx\Module\IHashtag.cs" />
     <Compile Include="InterfaceEx\Module\IRestaurantInfo.cs" />
     <Compile Include="InterfaceEx\Module\IUserlogins.cs" />
-    <Compile Include="Migrations\201709191511565_InitialCreate_RestaurantDB.cs" />
-    <Compile Include="Migrations\201709191511565_InitialCreate_RestaurantDB.Designer.cs">
-      <DependentUpon>201709191511565_InitialCreate_RestaurantDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709240411128_Update_Table_v1.1.cs" />
-    <Compile Include="Migrations\201709240411128_Update_Table_v1.1.Designer.cs">
-      <DependentUpon>201709240411128_Update_Table_v1.1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709251241137_Update_Table_v1.2_Foods.cs" />
-    <Compile Include="Migrations\201709251241137_Update_Table_v1.2_Foods.Designer.cs">
-      <DependentUpon>201709251241137_Update_Table_v1.2_Foods.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709251300393_Update_Table_v1.3_Foods.cs" />
-    <Compile Include="Migrations\201709251300393_Update_Table_v1.3_Foods.Designer.cs">
-      <DependentUpon>201709251300393_Update_Table_v1.3_Foods.cs</DependentUpon>
+    <Compile Include="Migrations\201710021033349_InitialCreate_RestaurantDB.cs" />
+    <Compile Include="Migrations\201710021033349_InitialCreate_RestaurantDB.Designer.cs">
+      <DependentUpon>201710021033349_InitialCreate_RestaurantDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Banners.cs" />
@@ -106,24 +94,14 @@
     <Compile Include="Models\Module\Userlogins.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710021033349_InitialCreate_RestaurantDB.resx">
+      <DependentUpon>201710021033349_InitialCreate_RestaurantDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709191511565_InitialCreate_RestaurantDB.resx">
-      <DependentUpon>201709191511565_InitialCreate_RestaurantDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709240411128_Update_Table_v1.1.resx">
-      <DependentUpon>201709240411128_Update_Table_v1.1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709251241137_Update_Table_v1.2_Foods.resx">
-      <DependentUpon>201709251241137_Update_Table_v1.2_Foods.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709251300393_Update_Table_v1.3_Foods.resx">
-      <DependentUpon>201709251300393_Update_Table_v1.3_Foods.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

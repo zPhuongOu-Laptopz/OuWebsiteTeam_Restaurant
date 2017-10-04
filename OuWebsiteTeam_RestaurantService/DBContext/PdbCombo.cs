@@ -1,4 +1,4 @@
-namespace OuWebsiteTeam_RestaurantService.DBContext
+﻿namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
     using System.Collections.Generic;
@@ -19,16 +19,20 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         [Required]
         [StringLength(250)]
+        [Display(Name ="Mô tả")]        
         public string Decriptions { get; set; }
 
         [Required]
         [StringLength(10)]
+        [Display(Name = "Mã Combo")]
         public string Code { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Giá cũ")]
         public decimal OldPrice { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Giá mới")]
         public decimal RealPrice { get; set; }
 
         [Column(TypeName = "datetime2")]
@@ -40,12 +44,15 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         public DateTime? ModifiedDate { get; set; }
 
         [Column(TypeName = "datetime2")]
+        [Display(Name = "Ngày hết hạn")]
         public DateTime OutDate { get; set; }
 
         public Guid? Modifedby { get; set; }
 
+        [Display(Name = "Hiển thị")]
         public bool? IsDisplay { get; set; }
 
+        [Display(Name = "Trạng thái")]
         public bool? IsStatus { get; set; }
 
         public int? BuyCount { get; set; }
