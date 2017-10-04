@@ -247,6 +247,11 @@
                     </a>
                     <ul>
                         <li>
+                            <a href="@Url.Action("Table","Table")">
+                                <i class="fa fa-angle-right"></i>&nbsp; Food
+                            </a>
+                        </li>
+                        <li>
                             <a href="@Url.Action("Test","Admin")">
                                 <i class="fa fa-angle-right"></i>&nbsp; Test
                             </a>
@@ -399,22 +404,22 @@
     <script src="/Content/assets/admin/js/chosen.jquery.min.js"></script>
     <script src="/Content/assets/admin/js/jquery.autosize.min.js"></script>
     <script src="/Content/assets/admin/js/jquery.tagsinput.js"></script>
-    <!-- Sort Table -->
-    <script src="~/Content/assets/admin/js/jquery.tablesorter.min.js"></script>
-    <script src="~/Content/assets/admin/js/jquery.ui.touch-punch.min.js"></script>
-    <script>
-            $(function () {
-                Metis.MetisTable();
-                Metis.metisSortable();
-            });
-    </script>
     <!-- Metis core scripts -->
     <script src="/Content/assets/admin/js/core.min.js"></script>
     <!-- Metis demo scripts -->
     <script src="/Content/assets/admin/js/app.min.js"></script>
     <!-- CKFinder -->
     <script src="~/ckeditor/ckeditor.js"></script>
-    <script src="~/ckfinder/ckfinder.js"></script>
+    <script src="~/ckfinder/ckfinder.js"></script>    <!-- Sort Table -->
+    <script src="~/Content/assets/admin/js/jquery.tablesorter.min.js"></script>
+    <script src="~/Content/assets/admin/js/jquery.ui.touch-punch.min.js"></script>
+    <script>
+        $(function () {
+            Metis.MetisTable();
+            Metis.metisSortable();
+        });
+    </script>
+
     @RenderSection("jsFooter", required: false)
 </body>
 </html>
