@@ -271,8 +271,10 @@
     <Compile Include="Areas\Admin\Controllers\FeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\FoodController.cs" />
     <Compile Include="Areas\Admin\Controllers\HashtagController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MeterialController.cs" />
     <Compile Include="Areas\Admin\Controllers\RestaurantInfoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TableController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\HomePage\Controllers\ContactController.cs" />
     <Compile Include="Areas\HomePage\Controllers\FeedbackController.cs" />
@@ -1471,11 +1473,16 @@
     <Content Include="Content\assets\admin\css\chosen.min.css" />
     <Content Include="Content\assets\admin\css\font-awesome.min.css" />
     <Content Include="Content\assets\admin\css\jasny-bootstrap.min.css" />
+    <Content Include="Content\assets\admin\css\login.css" />
     <Content Include="Content\assets\admin\css\main.min.css" />
     <Content Include="Content\assets\admin\css\metisMenu.min.css" />
     <Content Include="Content\assets\admin\css\style-switcher.css" />
     <Content Include="Content\assets\admin\css\theme.css" />
     <Content Include="Content\assets\admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\assets\admin\imgs\cp.png" />
+    <Content Include="Content\assets\admin\imgs\logo.png" />
+    <Content Include="Content\assets\admin\imgs\metis-tile.png" />
+    <Content Include="Content\assets\admin\imgs\user.gif" />
     <Content Include="Content\assets\admin\js\app.min.js" />
     <Content Include="Content\assets\admin\js\bootstrap.min.js" />
     <Content Include="Content\assets\admin\js\chosen.jquery.min.js" />
@@ -1485,7 +1492,9 @@
     <Content Include="Content\assets\admin\js\jquery.form.wizard.js" />
     <Content Include="Content\assets\admin\js\jquery.inputlimiter.js" />
     <Content Include="Content\assets\admin\js\jquery.min.js" />
+    <Content Include="Content\assets\admin\js\jquery.tablesorter.min.js" />
     <Content Include="Content\assets\admin\js\jquery.tagsinput.js" />
+    <Content Include="Content\assets\admin\js\jquery.ui.touch-punch.min.js" />
     <Content Include="Content\assets\admin\js\less-1.7.5.min.js" />
     <Content Include="Content\assets\admin\js\metisMenu.min.js" />
     <Content Include="Content\assets\admin\js\modernizr.min.js" />
@@ -1664,6 +1673,8 @@
     <Content Include="Content\assets\less\wells.less" />
     <Content Include="Areas\HomePage\Views\Media\Media.cshtml" />
     <Content Include="Areas\HomePage\Views\Video\Video.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Table\Table.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1726,7 +1737,6 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\HomePage\Models\" />
     <Folder Include="Areas\HomePage\Views\Shared\" />
-    <Folder Include="Content\assets\admin\plugin\" />
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
