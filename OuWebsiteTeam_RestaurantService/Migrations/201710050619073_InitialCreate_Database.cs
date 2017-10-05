@@ -3,7 +3,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate_RestaurantDB : DbMigration
+    public partial class InitialCreate_Database : DbMigration
     {
         public override void Up()
         {
@@ -19,22 +19,6 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
-                "dbo.PdbCategories",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        Name = c.String(nullable: false, maxLength: 50),
-                        IsStatus = c.Boolean(nullable: false),
-                        CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        CreatedBy = c.Guid(nullable: false),
-                        ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
-                        Modifedby = c.Guid(),
-                        Filter = c.Int(nullable: false),
-                        HtmlIcon = c.String(nullable: false, maxLength: 100),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
                 "dbo.PdbCombo",
                 c => new
                     {
@@ -43,14 +27,12 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         Code = c.String(nullable: false, maxLength: 10, fixedLength: true),
                         OldPrice = c.Decimal(nullable: false, storeType: "money"),
                         RealPrice = c.Decimal(nullable: false, storeType: "money"),
+                        OutDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreatedBy = c.Guid(nullable: false),
                         ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
-                        OutDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         Modifedby = c.Guid(),
-                        IsDisplay = c.Boolean(),
                         IsStatus = c.Boolean(),
-                        BuyCount = c.Int(),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -75,6 +57,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         ID = c.Guid(nullable: false),
                         NameFood = c.String(nullable: false, maxLength: 100),
                         Decriptions = c.String(nullable: false, maxLength: 100),
+                        Images = c.Binary(storeType: "image"),
                         PriceBigSize = c.Decimal(nullable: false, storeType: "money"),
                         PriceSmallSize = c.Decimal(nullable: false, storeType: "money"),
                         PercentDiscountForBigSize = c.Int(nullable: false),
@@ -90,30 +73,6 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         IsHot = c.Boolean(nullable: false),
                         ViewCount = c.Int(nullable: false),
                         BuyCount = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbFoodHashtags",
-                c => new
-                    {
-                        IDHashtag = c.Guid(nullable: false),
-                        IDFood = c.Guid(nullable: false),
-                        IsStatus = c.Boolean(),
-                    })
-                .PrimaryKey(t => new { t.IDHashtag, t.IDFood })
-                .ForeignKey("dbo.PdbHashtags", t => t.IDHashtag)
-                .ForeignKey("dbo.PdbFoods", t => t.IDFood)
-                .Index(t => t.IDHashtag)
-                .Index(t => t.IDFood);
-            
-            CreateTable(
-                "dbo.PdbHashtags",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        Name = c.String(maxLength: 50),
-                        IsStatus = c.String(maxLength: 10, fixedLength: true),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -149,24 +108,11 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                 c => new
                     {
                         ID = c.Guid(nullable: false),
-                        Name = c.String(nullable: false, maxLength: 50),
-                        Type = c.String(nullable: false, maxLength: 50),
-                        Value = c.String(nullable: false, maxLength: 50),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbEvents",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        Title = c.String(nullable: false, maxLength: 50),
-                        Text = c.String(maxLength: 10, fixedLength: true),
-                        CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        CreatedBy = c.Guid(nullable: false),
-                        ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
-                        Modifedby = c.Guid(),
-                        isStatus = c.Boolean(nullable: false),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 50),
+                        Email = c.String(nullable: false, maxLength: 50),
+                        NunberPhone = c.String(maxLength: 15, fixedLength: true),
+                        isAllowMail = c.Boolean(),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -179,30 +125,8 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         LastName = c.String(nullable: false, maxLength: 50),
                         NumberStar = c.Int(nullable: false),
                         Message = c.String(),
-                        Email = c.String(maxLength: 100),
+                        Email = c.String(nullable: false, maxLength: 100),
                         Phone = c.String(maxLength: 15, fixedLength: true),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbImagesFoods",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        IDFoods = c.Guid(nullable: false),
-                        ImageName = c.String(nullable: false, maxLength: 50),
-                        Link = c.String(maxLength: 100),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbImagesRestaurants",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        IDRes = c.Guid(nullable: false),
-                        ImageName = c.String(nullable: false, maxLength: 50),
-                        Link = c.String(maxLength: 100),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -259,30 +183,20 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
             DropForeignKey("dbo.PdbFoodCombo", "IDCombo", "dbo.PdbCombo");
             DropForeignKey("dbo.PdbFoodMeterials", "IDFood", "dbo.PdbFoods");
             DropForeignKey("dbo.PdbFoodMeterials", "IDMeterials", "dbo.PdbMeterials");
-            DropForeignKey("dbo.PdbFoodHashtags", "IDFood", "dbo.PdbFoods");
-            DropForeignKey("dbo.PdbFoodHashtags", "IDHashtag", "dbo.PdbHashtags");
             DropForeignKey("dbo.PdbFoodCombo", "IDFood", "dbo.PdbFoods");
             DropIndex("dbo.PdbFoodMeterials", new[] { "IDMeterials" });
             DropIndex("dbo.PdbFoodMeterials", new[] { "IDFood" });
-            DropIndex("dbo.PdbFoodHashtags", new[] { "IDFood" });
-            DropIndex("dbo.PdbFoodHashtags", new[] { "IDHashtag" });
             DropIndex("dbo.PdbFoodCombo", new[] { "IDFood" });
             DropIndex("dbo.PdbFoodCombo", new[] { "IDCombo" });
             DropTable("dbo.PdbUser");
             DropTable("dbo.PdbRestaurants");
-            DropTable("dbo.PdbImagesRestaurants");
-            DropTable("dbo.PdbImagesFoods");
             DropTable("dbo.PdbFeedbacks");
-            DropTable("dbo.PdbEvents");
             DropTable("dbo.PdbContacts");
             DropTable("dbo.PdbMeterials");
             DropTable("dbo.PdbFoodMeterials");
-            DropTable("dbo.PdbHashtags");
-            DropTable("dbo.PdbFoodHashtags");
             DropTable("dbo.PdbFoods");
             DropTable("dbo.PdbFoodCombo");
             DropTable("dbo.PdbCombo");
-            DropTable("dbo.PdbCategories");
             DropTable("dbo.PdbBanners");
         }
     }

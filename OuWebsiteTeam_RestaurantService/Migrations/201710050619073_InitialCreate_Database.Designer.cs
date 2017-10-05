@@ -7,13 +7,13 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialCreate_RestaurantDB : IMigrationMetadata
+    public sealed partial class InitialCreate_Database : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate_RestaurantDB));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate_Database));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710021033349_InitialCreate_RestaurantDB"; }
+            get { return "201710050619073_InitialCreate_Database"; }
         }
         
         string IMigrationMetadata.Source

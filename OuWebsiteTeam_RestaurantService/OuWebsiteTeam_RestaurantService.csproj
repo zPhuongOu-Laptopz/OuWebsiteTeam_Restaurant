@@ -54,54 +54,44 @@
     <Compile Include="Basic\RouteImages\RouteImagesGeneral.cs" />
     <Compile Include="Basic\RouteLinks\RouteLinksGeneral.cs" />
     <Compile Include="DBContext\PdbBanner.cs" />
-    <Compile Include="DBContext\PdbCategory.cs" />
     <Compile Include="DBContext\PdbCombo.cs" />
     <Compile Include="DBContext\PdbContact.cs" />
-    <Compile Include="DBContext\PdbEvent.cs" />
     <Compile Include="DBContext\PdbFeedback.cs" />
     <Compile Include="DBContext\PdbFood.cs" />
     <Compile Include="DBContext\PdbFoodCombo.cs" />
-    <Compile Include="DBContext\PdbFoodHashtag.cs" />
     <Compile Include="DBContext\PdbFoodMeterial.cs" />
-    <Compile Include="DBContext\PdbHashtag.cs" />
-    <Compile Include="DBContext\PdbImagesFood.cs" />
-    <Compile Include="DBContext\PdbImagesRestaurant.cs" />
     <Compile Include="DBContext\PdbMeterial.cs" />
     <Compile Include="DBContext\PdbRestaurant.cs" />
     <Compile Include="DBContext\PdbUser.cs" />
     <Compile Include="DBContext\RestaurantDBContext.cs" />
     <Compile Include="HTMLCode\Label\LabelForHome.cs" />
     <Compile Include="InterfaceEx\Module\IBanners.cs" />
-    <Compile Include="InterfaceEx\Module\ICategories.cs" />
     <Compile Include="InterfaceEx\Module\ICombos.cs" />
     <Compile Include="InterfaceEx\Module\IFeedbacks.cs" />
     <Compile Include="InterfaceEx\Module\IFoods.cs" />
-    <Compile Include="InterfaceEx\Module\IHashtag.cs" />
     <Compile Include="InterfaceEx\Module\IRestaurantInfo.cs" />
     <Compile Include="InterfaceEx\Module\IUserlogins.cs" />
-    <Compile Include="Migrations\201710021033349_InitialCreate_RestaurantDB.cs" />
-    <Compile Include="Migrations\201710021033349_InitialCreate_RestaurantDB.Designer.cs">
-      <DependentUpon>201710021033349_InitialCreate_RestaurantDB.cs</DependentUpon>
+    <Compile Include="Migrations\201710050619073_InitialCreate_Database.cs" />
+    <Compile Include="Migrations\201710050619073_InitialCreate_Database.Designer.cs">
+      <DependentUpon>201710050619073_InitialCreate_Database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Banners.cs" />
-    <Compile Include="Models\Module\Categories.cs" />
     <Compile Include="Models\Module\Combos.cs" />
     <Compile Include="Models\Module\Feedbacks.cs" />
     <Compile Include="Models\Module\Foods.cs" />
-    <Compile Include="Models\Module\Hashtags.cs" />
     <Compile Include="Models\Module\RestaurantInfo.cs" />
     <Compile Include="Models\Module\Userlogins.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710021033349_InitialCreate_RestaurantDB.resx">
-      <DependentUpon>201710021033349_InitialCreate_RestaurantDB.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710050619073_InitialCreate_Database.resx">
+      <DependentUpon>201710050619073_InitialCreate_Database.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,10 @@
-﻿namespace OuWebsiteTeam_RestaurantService.DBContext
+namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("PdbUser")]
     public partial class PdbUser
@@ -11,27 +13,22 @@
 
         [Required]
         [StringLength(30)]
-        [Display(Name = "Tài khoản")]
         public string Username { get; set; }
 
         [Required]
         [StringLength(30)]
-        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
         [Required]
         [StringLength(30)]
-        [Display(Name = "Tên")]
         public string Name { get; set; }
 
         [Required]
         [StringLength(256)]
-        [Display(Name = "Địa chỉ Email")]
         public string EmailAddress { get; set; }
 
         [Required]
         [StringLength(15)]
-        [Display(Name = "Số điện thoại")]
         public string PhoneNumber { get; set; }
 
         [Column(TypeName = "datetime2")]
@@ -47,10 +44,8 @@
 
         public Guid? ModifiedBy { get; set; }
 
-        [Display(Name = "Kích hoạt")]
         public bool isActive { get; set; }
 
-        [Display(Name = "Xóa tài khoản")]
         public bool isDeleted { get; set; }
 
         public int AccessFailedCount { get; set; }
@@ -60,7 +55,6 @@
         public Guid? AuthenticationSource { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Chọn hình")]
         public string Avatar { get; set; }
     }
 }

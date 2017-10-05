@@ -1,4 +1,4 @@
-﻿namespace OuWebsiteTeam_RestaurantService.DBContext
+namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
     using System.Collections.Generic;
@@ -12,17 +12,19 @@
 
         [Required]
         [StringLength(50)]
-        [Display(Name = "Tên")]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [StringLength(50)]
-        [Display(Name = "Kiểu")]
-        public string Type { get; set; }
+        public string LastName { get; set; }
 
         [Required]
         [StringLength(50)]
-        [Display(Name = "Giá trị")]
-        public string Value { get; set; }
+        public string Email { get; set; }
+
+        [StringLength(15)]
+        public string NunberPhone { get; set; }
+
+        public bool? isAllowMail { get; set; }
     }
 }
