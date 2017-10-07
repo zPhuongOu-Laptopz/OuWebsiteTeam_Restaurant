@@ -69,6 +69,7 @@
     <Compile Include="InterfaceEx\Module\ICombos.cs" />
     <Compile Include="InterfaceEx\Module\IFeedbacks.cs" />
     <Compile Include="InterfaceEx\Module\IFoods.cs" />
+    <Compile Include="InterfaceEx\Module\IMeterials.cs" />
     <Compile Include="InterfaceEx\Module\IRestaurantInfo.cs" />
     <Compile Include="InterfaceEx\Module\IUserlogins.cs" />
     <Compile Include="Migrations\201710051347398_InitialCreate_Database.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Models\Module\Combos.cs" />
     <Compile Include="Models\Module\Feedbacks.cs" />
     <Compile Include="Models\Module\Foods.cs" />
+    <Compile Include="Models\Module\Meterials.cs" />
     <Compile Include="Models\Module\RestaurantInfo.cs" />
     <Compile Include="Models\Module\Userlogins.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
