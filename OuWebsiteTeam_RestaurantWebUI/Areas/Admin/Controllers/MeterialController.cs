@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using OuWebsiteTeam_RestaurantService.InterfaceEx.Module;
+using OuWebsiteTeam_RestaurantService.DBContext;
 using System.Web.Mvc;
 
 namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
@@ -9,17 +7,33 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
     public class MeterialController : Controller
     {
         // GET: Admin/Meterial
-        private readonly 
+        private readonly IMeterials _context;
+        public MeterialController(IMeterials context)
+        {
+            this._context = context;
+        }
 
         [HttpGet]
-        public ActionResult Add()
+        public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Add()
+        public ActionResult Create(PdbMeterial met)
         {
+            if (ModelState.IsValid)
+            {
+                bool check = _context.Create(met);
+                if (check)
+                {
+                    ModelState.AddModelError("", "Thêm successful");
+                }
+                else
+                {
+                    return RedirectToAction("Create");
+                }
+            }
             return View();
         }
 
@@ -30,7 +44,7 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
 
         public ActionResult List()
         {
-            return View();
+            return View(this._context.GetAll());
         }
     }
 }

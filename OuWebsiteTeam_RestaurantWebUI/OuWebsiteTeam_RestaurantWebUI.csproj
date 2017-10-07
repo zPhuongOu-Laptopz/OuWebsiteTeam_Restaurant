@@ -1581,7 +1581,7 @@
     <Content Include="Areas\Admin\Views\Banner\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Contact\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Hashtag\Add.cshtml" />
-    <Content Include="Areas\Admin\Views\Meterial\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Meterial\Create.cshtml" />
     <Content Include="Areas\Admin\Views\User\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Test.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Test1.cshtml" />
