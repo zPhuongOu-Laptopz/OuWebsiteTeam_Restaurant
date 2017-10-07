@@ -82,7 +82,7 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
             modelBuilder.Entity<PdbMeterial>()
                 .HasMany(e => e.PdbFoodMeterials)
                 .WithRequired(e => e.PdbMeterial)
-                .HasForeignKey(e => e.IDMeterials)
+                .HasForeignKey(e => e.IDMeterial)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PdbRestaurant>()

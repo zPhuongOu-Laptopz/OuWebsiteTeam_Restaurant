@@ -1677,6 +1677,8 @@
     <Content Include="Areas\Admin\Views\Table\Table.cshtml" />
     <Content Include="Areas\Admin\Views\Banner\List.cshtml" />
     <Content Include="Areas\Admin\Views\Meterial\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Meterial\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Meterial\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />

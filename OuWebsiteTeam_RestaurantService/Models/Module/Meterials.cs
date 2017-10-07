@@ -16,6 +16,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
 
         public bool Create(PdbMeterial met)
         {
+            met.ID = Guid.NewGuid();
             _context.PdbMeterials.Add(met);
             _context.Entry(met).State = System.Data.Entity.EntityState.Added;
             return _context.SaveChanges() == 1;
@@ -23,13 +24,16 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
 
         public bool Delete(Guid id)
         {
-            throw new NotImplementedException();
+            PdbMeterial fo = _context.PdbMeterials.SingleOrDefault(item => item.ID == id);
+            _context.PdbMeterials.DefaultIfEmpty(fo);
+            _context.Entry(fo).State = System.Data.Entity.EntityState.Deleted;
+            return _context.SaveChanges() == 1;
         }
 
         public bool Edit(PdbMeterial met)
         {
-            _context.PdbFoods.Attach(fo);
-            _context.Entry(fo).State = System.Data.Entity.EntityState.Modified;
+            _context.PdbMeterials.Attach(met);
+            _context.Entry(met).State = System.Data.Entity.EntityState.Modified;
             return _context.SaveChanges() == 1; ;
         }
 
@@ -40,7 +44,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
 
         public PdbMeterial GetOne(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.PdbMeterials.SingleOrDefault(item => item.ID == id);
         }
     }
 }

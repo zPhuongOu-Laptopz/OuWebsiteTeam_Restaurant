@@ -18,7 +18,7 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         [Key]
         [Column(Order = 2)]
-        public Guid IDMeterials { get; set; }
+        public Guid IDMeterial { get; set; }
 
         public bool IsStatus { get; set; }
 

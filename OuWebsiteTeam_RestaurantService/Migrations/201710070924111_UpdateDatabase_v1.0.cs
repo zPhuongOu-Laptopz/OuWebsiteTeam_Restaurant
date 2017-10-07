@@ -3,7 +3,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate_Database : DbMigration
+    public partial class UpdateDatabase_v10 : DbMigration
     {
         public override void Up()
         {
@@ -82,14 +82,14 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                     {
                         ID = c.Guid(nullable: false),
                         IDFood = c.Guid(nullable: false),
-                        IDMeterials = c.Guid(nullable: false),
+                        IDMeterial = c.Guid(nullable: false),
                         IsStatus = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => new { t.ID, t.IDFood, t.IDMeterials })
-                .ForeignKey("dbo.PdbMeterials", t => t.IDMeterials)
+                .PrimaryKey(t => new { t.ID, t.IDFood, t.IDMeterial })
+                .ForeignKey("dbo.PdbMeterials", t => t.IDMeterial)
                 .ForeignKey("dbo.PdbFoods", t => t.IDFood)
                 .Index(t => t.IDFood)
-                .Index(t => t.IDMeterials);
+                .Index(t => t.IDMeterial);
             
             CreateTable(
                 "dbo.PdbMeterials",
@@ -182,9 +182,9 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
         {
             DropForeignKey("dbo.PdbFoodCombo", "IDCombo", "dbo.PdbCombo");
             DropForeignKey("dbo.PdbFoodMeterials", "IDFood", "dbo.PdbFoods");
-            DropForeignKey("dbo.PdbFoodMeterials", "IDMeterials", "dbo.PdbMeterials");
+            DropForeignKey("dbo.PdbFoodMeterials", "IDMeterial", "dbo.PdbMeterials");
             DropForeignKey("dbo.PdbFoodCombo", "IDFood", "dbo.PdbFoods");
-            DropIndex("dbo.PdbFoodMeterials", new[] { "IDMeterials" });
+            DropIndex("dbo.PdbFoodMeterials", new[] { "IDMeterial" });
             DropIndex("dbo.PdbFoodMeterials", new[] { "IDFood" });
             DropIndex("dbo.PdbFoodCombo", new[] { "IDFood" });
             DropIndex("dbo.PdbFoodCombo", new[] { "IDCombo" });
