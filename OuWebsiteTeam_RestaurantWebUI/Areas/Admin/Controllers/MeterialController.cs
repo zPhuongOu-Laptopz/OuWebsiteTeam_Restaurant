@@ -9,6 +9,15 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
     public class MeterialController : Controller
     {
         // GET: Admin/Meterial
+        private readonly 
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Add()
         {
             return View();

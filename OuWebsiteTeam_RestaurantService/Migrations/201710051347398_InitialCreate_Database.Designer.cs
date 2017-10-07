@@ -13,7 +13,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710050619073_InitialCreate_Database"; }
+            get { return "201710051347398_InitialCreate_Database"; }
         }
         
         string IMigrationMetadata.Source

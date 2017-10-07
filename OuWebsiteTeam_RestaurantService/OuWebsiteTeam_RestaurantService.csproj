@@ -71,9 +71,9 @@
     <Compile Include="InterfaceEx\Module\IFoods.cs" />
     <Compile Include="InterfaceEx\Module\IRestaurantInfo.cs" />
     <Compile Include="InterfaceEx\Module\IUserlogins.cs" />
-    <Compile Include="Migrations\201710050619073_InitialCreate_Database.cs" />
-    <Compile Include="Migrations\201710050619073_InitialCreate_Database.Designer.cs">
-      <DependentUpon>201710050619073_InitialCreate_Database.cs</DependentUpon>
+    <Compile Include="Migrations\201710051347398_InitialCreate_Database.cs" />
+    <Compile Include="Migrations\201710051347398_InitialCreate_Database.Designer.cs">
+      <DependentUpon>201710051347398_InitialCreate_Database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Banners.cs" />
@@ -89,8 +89,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710050619073_InitialCreate_Database.resx">
-      <DependentUpon>201710050619073_InitialCreate_Database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710051347398_InitialCreate_Database.resx">
+      <DependentUpon>201710051347398_InitialCreate_Database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
