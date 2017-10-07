@@ -21,9 +21,26 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
             return _context.SaveChanges() == 1;
         }
 
+        public bool Delete(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Edit(PdbMeterial met)
+        {
+            _context.PdbFoods.Attach(fo);
+            _context.Entry(fo).State = System.Data.Entity.EntityState.Modified;
+            return _context.SaveChanges() == 1; ;
+        }
+
         public IEnumerable<PdbMeterial> GetAll()
         {
             return this._context.PdbMeterials;
+        }
+
+        public PdbMeterial GetOne(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

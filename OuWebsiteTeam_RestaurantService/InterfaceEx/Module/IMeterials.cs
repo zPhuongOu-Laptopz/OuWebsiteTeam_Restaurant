@@ -12,8 +12,8 @@ namespace OuWebsiteTeam_RestaurantService.InterfaceEx.Module
         /// <returns></returns>
         IEnumerable<PdbMeterial> GetAll();
         bool Create(PdbMeterial met);
-        //bool Edit(PdbMeterial met);
-        //bool Delete(Guid id);
-        //PdbMeterial GetOne(Guid id);
+        bool Edit(PdbMeterial met);
+        bool Delete(Guid id);
+        PdbMeterial GetOne(Guid id);
     }
 }
