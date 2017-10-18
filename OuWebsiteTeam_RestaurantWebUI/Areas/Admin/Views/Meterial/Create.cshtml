@@ -13,32 +13,15 @@
                 <div class="box dark">
                     <header>
                         <div class="icons">
-                            <i class="fa fa-edit"></i>
+                            <span class="glyphicon glyphicon-check"></span>
                         </div>
-                        <h5>Input Text Fields</h5>
-                        <!-- .toolbar -->
-                        <div class="toolbar">
-                            <nav style="padding: 8px;">
-                                <a href="javascript:;" class="btn btn-default btn-xs collapse-box">
-                                    <i class="fa fa-minus"></i>
-                                </a>
-                                <a href="javascript:;" class="btn btn-default btn-xs full-box">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="javascript:;" class="btn btn-danger btn-xs close-box">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </nav>
-                        </div>
-                        <!-- /.toolbar -->
+                        <h5>Add Meterials</h5>
                     </header>
                     <div id="div-1" class="body">
                         @using (Html.BeginForm())
                         { @Html.AntiForgeryToken()
 
                             <div class="form-horizontal">
-                                <h4>PdbMeterial</h4>
-                                <hr />
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                 <div class="form-group">
                                     @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -80,6 +63,9 @@
                             </div>
                         }
                     </div>
+                    <div>
+                        @Html.ActionLink("Back to List", "List")
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,4 +75,3 @@
     <!-- /.inner -->
 </div>
 <!-- /.outer -->
-

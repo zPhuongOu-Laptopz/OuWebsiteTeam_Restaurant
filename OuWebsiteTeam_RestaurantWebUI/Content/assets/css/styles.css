@@ -11,7 +11,7 @@ body {
     --seven: black;
     --eight: #C7FF00;
     --nine: #616CA2;
-    font-family: 'Ubuntu', sans-serif;
+    background:var(--five);
 }
 
 img {
@@ -157,22 +157,10 @@ a {
             }
 
 .service {
-    background: var(--six);
-    padding: 25px 0;
+    background-image: url('../service/images/pattern.png');
+    background-color: var(--five);
+    padding:50px 0;
 }
-
-    .service .col-md-6 img {
-        box-shadow: 0px 0px 25px 0.5px black;
-        -moz-box-shadow: 0px 0px 25px 0.5px black;
-        -webkit-box-shadow: 0px 0px 10px 2px black;
-        transition: all 1.5s;
-    }
-
-        .service .col-md-6 img:hover {
-            transform: skew(-5deg);
-            -moz-transform: skew(-5deg);
-            -webkit-transform: skew(-5deg);
-        }
 
 .menu-food {
     width: 80%;
@@ -182,11 +170,11 @@ a {
     .menu-food h1 {
         font-weight: bold;
         text-align: center;
-        color: var(--seven);
+        color: var(--four);
     }
 
     .menu-food a {
-        color: var(--seven);
+        color: var(--four);
     }
 
     .menu-food ul li {
@@ -232,9 +220,9 @@ a {
     }
 
         .food .thumbnail:hover {
-            transform: scale(1.05);
-            -webkit-transform: scale(1.05);
-            -moz-transform: scale(1.05);
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
         }
 
     .food .description {
@@ -343,25 +331,13 @@ a {
     float: left;
     background: var(--five);
     padding-top: 20px;
-    box-shadow: 0px 0px 10px 0.5px black;
-    -moz-box-shadow: 0px 0px 10px 0.5px black;
-    -webkit-box-shadow: 0px 0px 10px 0.5px black;
-}
-
-@media (min-width: 1100px) {
-    .a {
-        height: 700px;
-    }
-}
-
-@media (min-width: 1500px) {
-    .a {
-        height: 800px;
-    }
+     
 }
 
 .b {
     z-index: 1;
     float: right;
-    background: url('../imgs/backgrounds/background.jpeg') center center no-repeat fixed;
+    /*background: url('../imgs/backgrounds/background.jpeg') center center no-repeat fixed;*/
+    background:url('../imgs/backgrounds/images.jpg') no-repeat center center fixed;
+    background-size:cover;
 }

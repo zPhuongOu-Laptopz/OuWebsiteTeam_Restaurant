@@ -5,47 +5,64 @@
     Layout = "~/Areas/Admin/Views/Layout/Layout.cshtml";
 }
 
-<h2>Details</h2>
+<div class="outer">
+    <div class="inner bg-light lter">
+        <!--BEGIN INPUT TEXT FIELDS-->
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="box dark">
+                    <header>
+                        <div class="icons">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                        </div>
+                        <h5>Detail Meterial</h5>
+                    </header>
+                    <div id="div-1" class="body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </dt>
 
-<div>
-    <h4>PdbMeterial</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Name)
+                            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Origin)
+                            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Origin)
-        </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Origin)
+                            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Origin)
-        </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Descriptions)
+                            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Descriptions)
-        </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Descriptions)
+                            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Descriptions)
-        </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Type)
+                            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Type)
+                            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
-
-    </dl>
+                        </dl>
+                    </div>
+                    <div>
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+                        @Html.ActionLink("Back to List", "List")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!--END TEXT INPUT FIELD-->
+    </div>
+    <!-- /.inner -->
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "List")
-</p>
+<!-- /.outer -->
