@@ -15,9 +15,6 @@
                         <header>
                             <h5>Table</h5>
                         </header>
-                        <p>
-                            @Html.ActionLink("Create New", "Create")
-                        </p>
                         <div id="sortableTable" class="body collapse in">
                             <table class="table table-bordered sortableTable responsive-table">
                                 <thead>
@@ -34,7 +31,9 @@
                                         <th>
                                             @Html.DisplayNameFor(model => model.Type)
                                         </th>
-                                        <th></th>
+                                        <th>
+                                            @Html.ActionLink("Create New", "Create")
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
