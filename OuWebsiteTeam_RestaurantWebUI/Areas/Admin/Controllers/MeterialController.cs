@@ -9,6 +9,7 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
     {
         // GET: Admin/Meterial
         private readonly IMeterials _context;
+
         public MeterialController(IMeterials context)
         {
             this._context = context;

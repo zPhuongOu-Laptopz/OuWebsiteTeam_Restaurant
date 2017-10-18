@@ -1578,7 +1578,6 @@
     <Content Include="Areas\Admin\Views\Category\Add.cshtml" />
     <Content Include="Areas\Admin\Views\RestaurantInfo\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Category\List.cshtml" />
-    <Content Include="Areas\Admin\Views\Banner\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Contact\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Hashtag\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Meterial\Create.cshtml" />
@@ -1679,6 +1678,8 @@
     <Content Include="Areas\Admin\Views\Meterial\List.cshtml" />
     <Content Include="Areas\Admin\Views\Meterial\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Meterial\Edit.cshtml" />
+    <Content Include="Areas\HomePage\Views\Feedback\Test.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Add.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1741,6 +1742,7 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\HomePage\Models\" />
     <Folder Include="Areas\HomePage\Views\Shared\" />
+    <Folder Include="Content\images\" />
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>

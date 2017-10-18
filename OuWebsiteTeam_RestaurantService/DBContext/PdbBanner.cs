@@ -10,9 +10,8 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
     {
         public Guid ID { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string ImageName { get; set; }
+        [Column(TypeName = "image")]
+        public byte[] ImageName { get; set; }
 
         [Required]
         [StringLength(50)]
