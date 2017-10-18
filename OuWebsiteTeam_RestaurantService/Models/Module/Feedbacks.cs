@@ -5,11 +5,21 @@ using OuWebsiteTeam_RestaurantService.DBContext;
 
 namespace OuWebsiteTeam_RestaurantService.Models.Module
 {
-    class Feedbacks : IFeedbacks
+    public class Feedbacks : IFeedbacks
     {
+        private readonly RestaurantDBContext _context;
+
+        public Feedbacks(RestaurantDBContext context)
+        {
+            this._context = context;
+        }
+
         public bool Create(PdbFeedback fe)
         {
-            throw new NotImplementedException();
+            fe.ID = Guid.NewGuid();
+            this._context.PdbFeedbacks.Add(fe);
+            this._context.Entry(fe).State = System.Data.Entity.EntityState.Added;
+            return this._context.SaveChanges() == 1;
         }
 
         public bool Delete(Guid id)

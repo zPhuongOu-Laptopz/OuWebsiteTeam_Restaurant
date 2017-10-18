@@ -3,7 +3,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class UpdateDatabase_v10 : DbMigration
+    public partial class IntialCreateDatabase_v10 : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                 c => new
                     {
                         ID = c.Guid(nullable: false),
-                        ImageName = c.String(nullable: false, maxLength: 50),
+                        ImageName = c.Binary(storeType: "image"),
                         Type = c.String(nullable: false, maxLength: 50),
                         Link = c.String(nullable: false, maxLength: 50),
                     })

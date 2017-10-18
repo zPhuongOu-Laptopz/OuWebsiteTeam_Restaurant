@@ -2,6 +2,8 @@
 using OuWebsiteTeam_RestaurantService.InterfaceEx.Module;
 using System.Web.Mvc;
 using System;
+using System.Web;
+using System.IO;
 
 namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
 {
@@ -22,21 +24,43 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(PdbBanner ban)
-        {
-            ban.ID = Guid.NewGuid();
-            if (ModelState.IsValid)
+        public ActionResult Add(PdbBanner ban, HttpPostedFileBase file)
+        {            
+            if (file != null)
             {
-                bool check = this._repos.Create(ban);
-                if (check)
+                ban.ID = Guid.NewGuid();
+                //string pic = System.IO.Path.GetFileName(file.FileName);
+                //string path = System.IO.Path.Combine(Server.MapPath("~/images/profile"), pic);
+                //// file is uploaded
+                //file.SaveAs(path);
+
+                // save the image path path to the database or you can send image 
+                // directly to database
+                // in-case if you want to store byte[] ie. for DB
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    ModelState.AddModelError("", "Create Successful !");
+                    file.InputStream.CopyTo(ms);
+                    byte[] array = ms.GetBuffer();
+                    ban.ImageName = array;
                 }
-                else
+                if (ModelState.IsValid)
                 {
-                    return RedirectToAction("Add");
+                    bool check = this._repos.Create(ban);
+                    if (check)
+                    {
+                        ModelState.AddModelError("", "Create Successful !");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Add");
+                    }
                 }
             }
+            else
+            {
+                ModelState.AddModelError("", "Bạn Chưa Chọn hình!");
+            }
+            
             return View();
         }
 
