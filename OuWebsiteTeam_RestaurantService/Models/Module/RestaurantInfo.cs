@@ -46,5 +46,10 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
         {
             return _context.PdbRestaurants.SingleOrDefault(res => res.ID == id);
         }
+
+        public PdbRestaurant GetOneSpecial()
+        {
+            return this._context.PdbRestaurants.SingleOrDefault();
+        }
     }
 }

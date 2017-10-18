@@ -54,6 +54,7 @@
     <Compile Include="Basic\RouteImages\RouteImagesGeneral.cs" />
     <Compile Include="Basic\RouteLinks\RouteLinksGeneral.cs" />
     <Compile Include="DBContext\PdbBanner.cs" />
+    <Compile Include="DBContext\PdbBookTable.cs" />
     <Compile Include="DBContext\PdbCombo.cs" />
     <Compile Include="DBContext\PdbContact.cs" />
     <Compile Include="DBContext\PdbFeedback.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="DBContext\RestaurantDBContext.cs" />
     <Compile Include="HTMLCode\Label\LabelForHome.cs" />
     <Compile Include="InterfaceEx\Module\IBanners.cs" />
+    <Compile Include="InterfaceEx\Module\IBookTable.cs" />
     <Compile Include="InterfaceEx\Module\ICombos.cs" />
     <Compile Include="InterfaceEx\Module\IFeedbacks.cs" />
     <Compile Include="InterfaceEx\Module\IFoods.cs" />
@@ -76,8 +78,13 @@
     <Compile Include="Migrations\201710150955110_IntialCreateDatabase_v1.0.Designer.cs">
       <DependentUpon>201710150955110_IntialCreateDatabase_v1.0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710181248399_UpdateDatabase_v2.0.cs" />
+    <Compile Include="Migrations\201710181248399_UpdateDatabase_v2.0.Designer.cs">
+      <DependentUpon>201710181248399_UpdateDatabase_v2.0.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Banners.cs" />
+    <Compile Include="Models\Module\BookTable.cs" />
     <Compile Include="Models\Module\Combos.cs" />
     <Compile Include="Models\Module\Feedbacks.cs" />
     <Compile Include="Models\Module\Foods.cs" />
@@ -93,6 +100,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710150955110_IntialCreateDatabase_v1.0.resx">
       <DependentUpon>201710150955110_IntialCreateDatabase_v1.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710181248399_UpdateDatabase_v2.0.resx">
+      <DependentUpon>201710181248399_UpdateDatabase_v2.0.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

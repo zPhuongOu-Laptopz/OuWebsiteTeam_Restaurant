@@ -34,7 +34,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
 
         public IEnumerable<PdbFeedback> GetAll()
         {
-            throw new NotImplementedException();
+            return this._context.PdbFeedbacks;
         }
 
         public PdbFeedback GetOne(Guid id)

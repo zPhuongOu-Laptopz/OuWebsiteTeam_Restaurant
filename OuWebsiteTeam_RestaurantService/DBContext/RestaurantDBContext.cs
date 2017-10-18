@@ -13,6 +13,7 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         }
 
         public virtual DbSet<PdbBanner> PdbBanners { get; set; }
+        public virtual DbSet<PdbBookTable> PdbBookTables { get; set; }
         public virtual DbSet<PdbCombo> PdbComboes { get; set; }
         public virtual DbSet<PdbContact> PdbContacts { get; set; }
         public virtual DbSet<PdbFeedback> PdbFeedbacks { get; set; }
