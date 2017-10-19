@@ -1,0 +1,18 @@
+﻿.b {
+    background: none;
+}
+
+.page-name {
+    background: url('../imgs/backgrounds/bg-breakfast.jpeg') no-repeat center;
+    margin-bottom:5%;
+}
+
+    .page-name h1 {
+        text-align: center;
+        padding: 5% 5% 2.5% 5%;
+    }
+
+.contact-info{
+    text-align:center;
+    margin-top:20%;
+}

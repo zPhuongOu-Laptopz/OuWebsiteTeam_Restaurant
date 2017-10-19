@@ -1,21 +1,34 @@
 ﻿
 @{
     ViewBag.Title = "Contact";
-    Layout = "~/Areas/HomePage/Views/Layout/Layout_Menu_Header.cshtml";
+    Layout = "~/Areas/HomePage/Views/Layout/Layout_Page.cshtml";
 }
 
-<h2>Contact</h2>
-<hr/>
 
-<div class="row">
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-75bcae4f-8de5-43a4-81c4-2b4c63834409"></div>
+<!-- Breadcrumb -->
+<div class="row page-name">
+    <h1>Liên hệ</h1>
+    <div class="col-md-6 col-md-offset-3">
+        <ol class="breadcrumb">
+            <li><a href="@Url.Action("Index","HomeRes")">Home</a></li>
+            <li><a href="@Url.Action("Contact","Contact")">Liên hệ</a></li>
+        </ol>
+    </div>
 </div>
 
+
 <div class="row">
-    <p>Địa chỉ: 93 Nguyễn Văn Thủ, Phường Đa Kao, Quận 1, Tp.HCM</p>
-    <p>Điện thoại: 028 6262 9999</p>
-    <p>Fax: 028 3910 2233</p>
-    <p>Mã số thuế: 1800348038-002</p>
+    <!-- Map -->
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-75bcae4f-8de5-43a4-81c4-2b4c63834409"></div>
+    </div>
+    <!-- Info -->
+    <div class="col-xs-12 col-sm-6 col-md-6 contact-info">
+        <p>Địa chỉ: 93 Nguyễn Văn Thủ, Phường Đa Kao, Quận 1, Tp.HCM</p>
+        <p>Điện thoại: 028 6262 9999</p>
+        <p>Fax: 028 3910 2233</p>
+        <p>Mã số thuế: 1800348038-002</p>
+    </div>
 </div>
 

@@ -1,10 +1,19 @@
 ﻿
 @{
     ViewBag.Title = "Media";
-    Layout = "~/Areas/HomePage/Views/Layout/Layout_No_Menu.cshtml";
+    Layout = "~/Areas/HomePage/Views/Layout/Layout_Page.cshtml";
 }
 
-<h2>Media</h2>
+<!-- Breadcrumb -->
+<div class="row page-name">
+    <h1>Media</h1>
+    <div class="col-md-6 col-md-offset-3">
+        <ol class="breadcrumb">
+            <li><a href="@Url.Action("Index","HomeRes")">Home</a></li>
+            <li><a href="@Url.Action("Media","Media")">Media</a></li>
+        </ol>
+    </div>
+</div>
 
 <div class="row">
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

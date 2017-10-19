@@ -1,0 +1,30 @@
+﻿.b{
+    background:none;
+}
+
+.a{
+    display:none;
+}
+
+.page-name {
+    background: url('../imgs/backgrounds/bg-breakfast.jpeg') no-repeat center;
+}
+
+    .page-name h1 {
+        text-align: center;
+        padding: 5% 5% 2.5% 5%;
+    }
+
+.menu-food {
+    width: 100%;
+}
+
+    .menu-food ul li {
+        width: 14.66666667%;
+        margin: 1% 0.75%;
+    }
+
+
+.food {
+    text-align: center;
+}

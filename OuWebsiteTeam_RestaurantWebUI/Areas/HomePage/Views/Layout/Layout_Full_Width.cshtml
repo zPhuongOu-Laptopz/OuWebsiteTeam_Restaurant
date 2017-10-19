@@ -10,34 +10,46 @@
     <title>Restaurant</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Service -->
+    <link href="~/Content/assets/service/css/stimenu.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Wire+One&v1' rel='stylesheet' type='text/css' />
+    <!-- CSS Menu-Food -->
+    <link href="~/Content/assets/menufood/css/component.css" rel="stylesheet" />
+    <!-- CSS Food -->
+    <link href="~/Content/assets/food/css/style_commons.css" rel="stylesheet" />
+    <link href="~/Content/assets/food/css/style.css" rel="stylesheet" />
+    <!-- CSS website -->
     <link href="~/Content/assets/css/styles.css" rel="stylesheet" />
-    <link href="~/Content/assets/css/menu-page.css" rel="stylesheet" />
-    <link href="~/Content/assets/css/feedback.css" rel="stylesheet" />
-    <link href="~/Content/assets/css/contact.css" rel="stylesheet" />
-    <style>
-        .b {
-            background: white;
-        }
-    </style>
-    <script src="~/Content/assets/js/jquery.min.js"></script>
-    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+    <link href="~/Content/assets/css/menu-toggle.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/full-width-style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="col-md-2 a">
-        <img src="~/Content/assets/imgs/icons/logo.png" alt="logo.png">
+    <!-- Menu-left -->
 
-        <div class="row menu">            
+    <!-- Toggle Button -->
+    <div class="row">
+        <div class="col-xs-4 col-sm-2 col-md-1 toggle-button">
+            <span class="glyphicon glyphicon glyphicon-align-justify"></span>
+        </div>
+    </div>
+
+    <div class="col-xs-9 col-sm-4 col-md-2 a toggle-menu">
+        <img src="~/Content/assets/imgs/icons/logo.png" alt="logo.png">
+        <!-- Menu -->
+        <div class="row menu">
             <ul>
-                <li class="active"><span class="glyphicon glyphicon-home"></span><a href="#">Trang chủ</a></li>
+                <li class="active"><span class="glyphicon glyphicon-home"></span><a href="@Url.Action("Index","HomeRes")">Trang chủ</a></li>
                 <li><span class="glyphicon glyphicon-info-sign"></span><a href="#">Giới thiệu</a></li>
-                <li><span class="glyphicon glyphicon-list-alt"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Menu</span></a>
+                <li>
+                    <span class="glyphicon glyphicon-list-alt"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Menu</a>
                     <ul id="collapseOne" class="panel-collapse collapse">
                         <li><span class="glyphicon glyphicon-cutlery"></span><a href="@Url.Action("Menu","Menu")">Điểm tâm sáng</a></li>
                         <li><span class="glyphicon glyphicon-cutlery"></span><a href="@Url.Action("Menu","Menu")">Bữa trưa</a></li>
                         <li><span class="glyphicon glyphicon-cutlery"></span><a href="@Url.Action("Menu","Menu")">Ăn tối</a></li>
                     </ul>
-                </li>                
+                </li>
                 <li><span class="glyphicon glyphicon-phone"></span><a href="@Url.Action("Contact","Contact")">Liên hệ</a></li>
                 <li><span class="glyphicon glyphicon-refresh"></span><a href="@Url.Action("Feedback","Feedback")">Phản hồi</a></li>
                 <li><span class="glyphicon glyphicon-picture"></span><a href="@Url.Action("Media","Media")">Hình ảnh</a></li>
@@ -45,6 +57,7 @@
             </ul>
         </div>
 
+        <!-- Info -->
         <div class="row info">
             <ul>
                 <li>
@@ -68,6 +81,7 @@
             </ul>
         </div>
 
+        <!-- Social -->
         <div class="row social">
             <ul>
                 <li><a href="#"><img src="~/Content/assets/imgs/icons/facebook.png" alt="facebook.png"></a></li>
@@ -78,25 +92,13 @@
         </div>
     </div>
 
-    <div class="col-md-10 b">
-        <!-- Breadcrumb -->
-        <div class="row menu-name">
-            <h1>Menu buổi sáng</h1>
-            <div class="col-md-6 col-md-offset-3">
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Library</a></li>
-                    <li><a href="#">Data</a></li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- Phan noi dung thay doi -->
+    <!-- Content -->
+    <div class="col-xs-12 col-sm-12 col-md-12 b">
         @RenderBody()
 
-        <!-- Footer -->
+        <!-- Menu footer -->
         <div class="row footer">
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <h4><strong>Breakfast</strong></h4>
                 <ul class="list-group">
                     <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
@@ -107,7 +109,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <h4><strong>Lunch</strong></h4>
                 <ul class="list-group">
                     <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
@@ -118,7 +120,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <h4><strong>Dinner</strong></h4>
                 <ul class="list-group">
                     <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
@@ -129,7 +131,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <h4><strong>Service</strong></h4>
                 <ul class="list-group">
                     <li class="list-group-item item-1"><span class="glyphicon glyphicon-hand-right"></span><a href="#">Cras justo odio</a></li>
@@ -140,12 +142,34 @@
                 </ul>
             </div>
         </div>
+
         <div class="row footer-info">
             <div class="col-md-12">
                 <p>&copy; Design by Nguyen Quoc Huy.</p>
             </div>
         </div>
     </div>
+    <!-- Bootstrap js -->
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+
+    <!-- JS Service,JS Food -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+    <script src="~/Content/assets/service/js/jquery.easing.1.3.js"></script>
+    <script src="~/Content/assets/service/js/jquery.iconmenu.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#sti-menu').iconmenu();
+        });
+    </script>
+
+    <!-- JS Menu-Food -->
+    <script src="~/Content/assets/menufood/js/modernizr.custom.js"></script>
+
+    <!-- JS Webiste -->
+    <script src="~/Content/assets/js/jquery.js"></script>
 </body>
 
 </html>
+

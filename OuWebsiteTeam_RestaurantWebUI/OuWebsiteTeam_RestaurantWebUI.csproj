@@ -1501,9 +1501,9 @@
     <Content Include="Content\assets\admin\js\screenfull.js" />
     <Content Include="Content\assets\admin\js\style-switcher.min.js" />
     <Content Include="Content\assets\css\bootstrap.min.css" />
-    <Content Include="Content\assets\css\contact.css" />
-    <Content Include="Content\assets\css\feedback.css" />
-    <Content Include="Content\assets\css\menu-page.css" />
+    <Content Include="Content\assets\css\page-style.css" />
+    <Content Include="Content\assets\css\full-width-style.css" />
+    <Content Include="Content\assets\css\menu-toggle.css" />
     <Content Include="Content\assets\food\css\demo.css" />
     <Content Include="Content\assets\food\css\reset.css" />
     <Content Include="Content\assets\food\css\style.css" />
@@ -1651,10 +1651,10 @@
     <Content Include="ckfinder\userfiles\.htaccess" />
     <Content Include="Areas\Admin\Views\Food\Update.cshtml" />
     <Content Include="Areas\HomePage\Views\Menu\Menu.cshtml" />
-    <Content Include="Areas\HomePage\Views\Layout\Layout_No_Menu.cshtml" />
+    <Content Include="Areas\HomePage\Views\Layout\Layout_Full_Width.cshtml" />
     <Content Include="Areas\HomePage\Views\Feedback\Feedback.cshtml" />
     <Content Include="Areas\HomePage\Views\Contact\Contact.cshtml" />
-    <Content Include="Areas\HomePage\Views\Layout\Layout_Menu_Header.cshtml" />
+    <Content Include="Areas\HomePage\Views\Layout\Layout_Page.cshtml" />
     <Content Include="Content\assets\less\component-animations.less" />
     <Content Include="Content\assets\less\.csscomb.json" />
     <Content Include="Content\assets\less\.csslintrc" />

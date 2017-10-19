@@ -1,180 +1,196 @@
 ﻿
 @{
     ViewBag.Title = "Menu";
-    Layout = "~/Areas/HomePage/Views/Layout/Layout_No_Menu.cshtml";
+    Layout = "~/Areas/HomePage/Views/Layout/Layout_Full_Width.cshtml";
 }
 
-<!-- Menu food-->
-<div class="row menu-food">
-    <ul>
-        <li><a href="#">Món Chay</a></li>
-        <li><a href="#">Món Mặn</a></li>
-        <li><a href="#">Combo</a></li>
-        <li><a href="#">Tráng Miệng</a></li>
-        <li><a href="#">Thức Uống</a></li>
-        <li><a href="#">Thức Uống</a></li>
-    </ul>
+<!-- Breadcrumb -->
+<div class="row page-name">
+    <h1>Menu</h1>
+    <div class="col-md-6 col-md-offset-3">
+        <ol class="breadcrumb">
+            <li><a href="@Url.Action("Index","HomeRes")">Home</a></li>
+            <li><a href="@Url.Action("Menu","Menu")">Menu</a></li>
+        </ol>
+    </div>
 </div>
 
-<!-- Food -->
-<div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-1.png" />
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 1</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
-                </div>
-            </div>
+<div class="container">
+    <!-- Menu food-->
+    <div class="row menu-food">
+        <div class="col-md-12">
+            <section class="color-1">
+                <nav class="cl-effect-8">
+                    <a href="#">Món Chay</a>
+                    <a href="#">Món Mặn</a>
+                    <a href="#">Combo</a>
+                    <a href="#">Tráng Miệng</a>
+                    <a href="#">Thức Uống</a>
+                </nav>
+            </section>
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-2.png" alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 2</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+    <!-- Food -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-3.png" alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 3</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 200$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-4.png " alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 4</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 2000$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-5.jpg" alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 5</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-6.jpg" alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 6</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-6.jpg" alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 6</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-6.jpg" alt="">
-            </div>
-            <div class="col-md-12">
-                <h3>Món ăn 6</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 food">
-        <div class="thumbnail clearfix">
-            <div class="col-md-10 col-md-offset-1">
-                <img src="~/Content/assets/imgs/products/product-6.jpg" alt="">
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-12">
-                <h3>Món ăn 6</h3>
-                <p class="description">
-                    Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                </p>
-                <div class="btn-group price">
-                    <button class="btn btn-a small">M: <strike>15$</strike> <strong>10$</strong></button>
-                    <button class="btn btn-b medium">L: <strike>25$</strike> <strong>20$</strong></button>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 food">
+            <div class="thumbnail clearfix">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="~/Content/assets/imgs/products/product-1.png" />
+                </div>
+                <div class="col-md-12">
+                    <h3>Món ăn 1</h3>
+                    <p class="description">
+                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
+                    </p>
+                    <div class="col-md-12 price-menu">
+                        <span class="label label-warning">M: 10$</span>
+                        <span class="label label-danger">L: 20$</span>
+                    </div>
                 </div>
             </div>
         </div>
