@@ -18,6 +18,15 @@ namespace OuWebsiteTeam_RestaurantService.InterfaceEx.Module
 
         IEnumerable<PdbFood> GetForIndex();
 
-        PdbFood GetOneBestSale(Guid id); 
+        PdbFood GetOneBestSale(Guid id);
+        IEnumerable<PdbFood> GetFourFoodForBreakfast();
+
+        IEnumerable<PdbFood> GetFourFoodForDrink();
+
+        IEnumerable<PdbFood> GetFourFoodForLunch();
+
+        IEnumerable<PdbFood> GetFourFoodForDinner();
+
+        IEnumerable<PdbFood> GetFourFoodForCake();
     }
 }

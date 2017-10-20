@@ -64,13 +64,45 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult Update()
-        {
-            return View();
-        }
-
         public ActionResult List()
         {
+            return View(this._repos.GetAll());
+        }
+
+        public ActionResult Delete(Guid id)
+        {
+            bool check = this._repos.Delete(id);
+            return RedirectToAction("List");
+        }
+
+        public ActionResult Details(Guid id)
+        {
+            PdbBanner mete = this._repos.GetOne(id);
+            return View(mete);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(Guid id)
+        {
+            PdbBanner met = this._repos.GetOne(id);
+            return View(met);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(PdbBanner met)
+        {
+            if (ModelState.IsValid)
+            {
+                bool check = this._repos.Edit(met);
+                if (check)
+                {
+                    ModelState.AddModelError("", "Edit successful");
+                }
+                else
+                {
+                    return RedirectToAction("Edit");
+                }
+            }
             return View();
         }
     }

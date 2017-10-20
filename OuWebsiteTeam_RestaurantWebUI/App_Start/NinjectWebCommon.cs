@@ -65,11 +65,11 @@ namespace OuWebsiteTeam_RestaurantWebUI.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             // Dependency - NP
-            kernel.Bind<IMeterials>().To<Meterials>();
             kernel.Bind<IRestaurantInfo>().To<RestaurantInfo>();
             kernel.Bind<IBanners>().To<Banners>();
-            kernel.Bind<ICombos>().To<Combos>();
             kernel.Bind<IFeedbacks>().To<Feedbacks>();
+            kernel.Bind<IFoods>().To<Foods>();
+            kernel.Bind<IContact>().To<Contacts>();
         }        
     }
 }

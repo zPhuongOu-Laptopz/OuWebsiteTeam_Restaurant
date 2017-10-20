@@ -11,8 +11,7 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PdbFood()
         {
-            PdbFoodComboes = new HashSet<PdbFoodCombo>();
-            PdbFoodMeterials = new HashSet<PdbFoodMeterial>();
+
         }
 
         public Guid ID { get; set; }
@@ -20,6 +19,10 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         [Required]
         [StringLength(100)]
         public string NameFood { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Type { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -63,11 +66,5 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         public int ViewCount { get; set; }
 
         public int BuyCount { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PdbFoodCombo> PdbFoodComboes { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PdbFoodMeterial> PdbFoodMeterials { get; set; }
     }
 }

@@ -16,15 +16,12 @@
                             <h5>Table</h5>
                         </header>
                         <p>
-                            @Html.ActionLink("Create New", "Create")
+                            @Html.ActionLink("Create New", "Add")
                         </p>
                         <div id="sortableTable" class="body collapse in">
                             <table class="table table-bordered sortableTable responsive-table">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.ImageName)
-                                        </th>
                                         <th>
                                             @Html.DisplayNameFor(model => model.Type)
                                         </th>
@@ -36,13 +33,9 @@
                                     </tr>                                    
                                 </thead>
                                 <tbody>
-
                                     @foreach (var item in Model)
                                     {
                                         <tr>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.ImageName)
-                                            </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Type)
                                             </td>

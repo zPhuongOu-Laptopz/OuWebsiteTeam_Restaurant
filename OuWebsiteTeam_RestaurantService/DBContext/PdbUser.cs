@@ -47,14 +47,5 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         public bool isActive { get; set; }
 
         public bool isDeleted { get; set; }
-
-        public int AccessFailedCount { get; set; }
-
-        public int AccessCount { get; set; }
-
-        public Guid? AuthenticationSource { get; set; }
-
-        [StringLength(50)]
-        public string Avatar { get; set; }
     }
 }

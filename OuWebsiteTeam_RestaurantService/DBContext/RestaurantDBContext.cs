@@ -14,36 +14,14 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         public virtual DbSet<PdbBanner> PdbBanners { get; set; }
         public virtual DbSet<PdbBookTable> PdbBookTables { get; set; }
-        public virtual DbSet<PdbCombo> PdbComboes { get; set; }
         public virtual DbSet<PdbContact> PdbContacts { get; set; }
         public virtual DbSet<PdbFeedback> PdbFeedbacks { get; set; }
-        public virtual DbSet<PdbFoodCombo> PdbFoodComboes { get; set; }
-        public virtual DbSet<PdbFoodMeterial> PdbFoodMeterials { get; set; }
         public virtual DbSet<PdbFood> PdbFoods { get; set; }
-        public virtual DbSet<PdbMeterial> PdbMeterials { get; set; }
         public virtual DbSet<PdbRestaurant> PdbRestaurants { get; set; }
         public virtual DbSet<PdbUser> PdbUsers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PdbCombo>()
-                .Property(e => e.Code)
-                .IsFixedLength();
-
-            modelBuilder.Entity<PdbCombo>()
-                .Property(e => e.OldPrice)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<PdbCombo>()
-                .Property(e => e.RealPrice)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<PdbCombo>()
-                .HasMany(e => e.PdbFoodComboes)
-                .WithRequired(e => e.PdbCombo)
-                .HasForeignKey(e => e.IDCombo)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<PdbContact>()
                 .Property(e => e.NunberPhone)
                 .IsFixedLength();
@@ -67,24 +45,6 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
             modelBuilder.Entity<PdbFood>()
                 .Property(e => e.PriceDiscountForSmallSize)
                 .HasPrecision(19, 4);
-
-            modelBuilder.Entity<PdbFood>()
-                .HasMany(e => e.PdbFoodComboes)
-                .WithRequired(e => e.PdbFood)
-                .HasForeignKey(e => e.IDFood)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PdbFood>()
-                .HasMany(e => e.PdbFoodMeterials)
-                .WithRequired(e => e.PdbFood)
-                .HasForeignKey(e => e.IDFood)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PdbMeterial>()
-                .HasMany(e => e.PdbFoodMeterials)
-                .WithRequired(e => e.PdbMeterial)
-                .HasForeignKey(e => e.IDMeterial)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PdbRestaurant>()
                 .Property(e => e.Phone)
