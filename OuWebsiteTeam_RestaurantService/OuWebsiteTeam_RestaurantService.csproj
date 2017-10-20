@@ -67,17 +67,9 @@
     <Compile Include="InterfaceEx\Module\IFoods.cs" />
     <Compile Include="InterfaceEx\Module\IRestaurantInfo.cs" />
     <Compile Include="InterfaceEx\Module\IUserlogins.cs" />
-    <Compile Include="Migrations\201710150955110_IntialCreateDatabase_v1.0.cs" />
-    <Compile Include="Migrations\201710150955110_IntialCreateDatabase_v1.0.Designer.cs">
-      <DependentUpon>201710150955110_IntialCreateDatabase_v1.0.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710181248399_UpdateDatabase_v2.0.cs" />
-    <Compile Include="Migrations\201710181248399_UpdateDatabase_v2.0.Designer.cs">
-      <DependentUpon>201710181248399_UpdateDatabase_v2.0.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710201337280_UpdateDatabase_v3.0.cs" />
-    <Compile Include="Migrations\201710201337280_UpdateDatabase_v3.0.Designer.cs">
-      <DependentUpon>201710201337280_UpdateDatabase_v3.0.cs</DependentUpon>
+    <Compile Include="Migrations\201710201438155_IntialCreateDatabase.cs" />
+    <Compile Include="Migrations\201710201438155_IntialCreateDatabase.Designer.cs">
+      <DependentUpon>201710201438155_IntialCreateDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Module\Banners.cs" />
@@ -93,14 +85,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710150955110_IntialCreateDatabase_v1.0.resx">
-      <DependentUpon>201710150955110_IntialCreateDatabase_v1.0.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710181248399_UpdateDatabase_v2.0.resx">
-      <DependentUpon>201710181248399_UpdateDatabase_v2.0.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710201337280_UpdateDatabase_v3.0.resx">
-      <DependentUpon>201710201337280_UpdateDatabase_v3.0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710201438155_IntialCreateDatabase.resx">
+      <DependentUpon>201710201438155_IntialCreateDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

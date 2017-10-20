@@ -14,7 +14,6 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         public virtual DbSet<PdbBanner> PdbBanners { get; set; }
         public virtual DbSet<PdbBookTable> PdbBookTables { get; set; }
-        public virtual DbSet<PdbContact> PdbContacts { get; set; }
         public virtual DbSet<PdbFeedback> PdbFeedbacks { get; set; }
         public virtual DbSet<PdbFood> PdbFoods { get; set; }
         public virtual DbSet<PdbRestaurant> PdbRestaurants { get; set; }
@@ -22,10 +21,6 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PdbContact>()
-                .Property(e => e.NunberPhone)
-                .IsFixedLength();
-
             modelBuilder.Entity<PdbFeedback>()
                 .Property(e => e.Phone)
                 .IsFixedLength();

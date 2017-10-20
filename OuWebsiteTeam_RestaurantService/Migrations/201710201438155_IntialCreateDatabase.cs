@@ -3,7 +3,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class IntialCreateDatabase_v10 : DbMigration
+    public partial class IntialCreateDatabase : DbMigration
     {
         public override void Up()
         {
@@ -19,36 +19,34 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
-                "dbo.PdbCombo",
+                "dbo.PdbBookTables",
                 c => new
                     {
                         ID = c.Guid(nullable: false),
-                        Decriptions = c.String(nullable: false, maxLength: 250),
-                        Code = c.String(nullable: false, maxLength: 10, fixedLength: true),
-                        OldPrice = c.Decimal(nullable: false, storeType: "money"),
-                        RealPrice = c.Decimal(nullable: false, storeType: "money"),
-                        OutDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        CreatedBy = c.Guid(nullable: false),
-                        ModifiedDate = c.DateTime(precision: 7, storeType: "datetime2"),
-                        Modifedby = c.Guid(),
-                        IsStatus = c.Boolean(),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 50),
+                        Phone = c.String(nullable: false, maxLength: 15),
+                        Email = c.String(maxLength: 100),
+                        NumberPerson = c.Int(nullable: false),
+                        TypeRoom = c.String(nullable: false, maxLength: 100),
+                        Time = c.DateTime(nullable: false),
+                        Note = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
-                "dbo.PdbFoodCombo",
+                "dbo.PdbFeedbacks",
                 c => new
                     {
-                        IDCombo = c.Guid(nullable: false),
-                        IDFood = c.Guid(nullable: false),
-                        IsStatus = c.Boolean(),
+                        ID = c.Guid(nullable: false),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 50),
+                        NumberStar = c.Int(nullable: false),
+                        Message = c.String(),
+                        Email = c.String(nullable: false, maxLength: 100),
+                        Phone = c.String(maxLength: 15, fixedLength: true),
                     })
-                .PrimaryKey(t => new { t.IDCombo, t.IDFood })
-                .ForeignKey("dbo.PdbFoods", t => t.IDFood)
-                .ForeignKey("dbo.PdbCombo", t => t.IDCombo)
-                .Index(t => t.IDCombo)
-                .Index(t => t.IDFood);
+                .PrimaryKey(t => t.ID);
             
             CreateTable(
                 "dbo.PdbFoods",
@@ -73,60 +71,7 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         IsHot = c.Boolean(nullable: false),
                         ViewCount = c.Int(nullable: false),
                         BuyCount = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbFoodMeterials",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        IDFood = c.Guid(nullable: false),
-                        IDMeterial = c.Guid(nullable: false),
-                        IsStatus = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.ID, t.IDFood, t.IDMeterial })
-                .ForeignKey("dbo.PdbMeterials", t => t.IDMeterial)
-                .ForeignKey("dbo.PdbFoods", t => t.IDFood)
-                .Index(t => t.IDFood)
-                .Index(t => t.IDMeterial);
-            
-            CreateTable(
-                "dbo.PdbMeterials",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        Name = c.String(nullable: false, maxLength: 100),
-                        Origin = c.String(maxLength: 50),
-                        Descriptions = c.String(maxLength: 250),
-                        Type = c.String(nullable: false, maxLength: 50),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbContacts",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        FirstName = c.String(nullable: false, maxLength: 50),
-                        LastName = c.String(nullable: false, maxLength: 50),
-                        Email = c.String(nullable: false, maxLength: 50),
-                        NunberPhone = c.String(maxLength: 15, fixedLength: true),
-                        isAllowMail = c.Boolean(),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.PdbFeedbacks",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        FirstName = c.String(nullable: false, maxLength: 50),
-                        LastName = c.String(nullable: false, maxLength: 50),
-                        NumberStar = c.Int(nullable: false),
-                        Message = c.String(),
-                        Email = c.String(nullable: false, maxLength: 100),
-                        Phone = c.String(maxLength: 15, fixedLength: true),
+                        Type = c.String(nullable: false, maxLength: 100),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -169,10 +114,6 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
                         ModifiedBy = c.Guid(),
                         isActive = c.Boolean(nullable: false),
                         isDeleted = c.Boolean(nullable: false),
-                        AccessFailedCount = c.Int(nullable: false),
-                        AccessCount = c.Int(nullable: false),
-                        AuthenticationSource = c.Guid(),
-                        Avatar = c.String(maxLength: 50),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -180,23 +121,11 @@ namespace OuWebsiteTeam_RestaurantService.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.PdbFoodCombo", "IDCombo", "dbo.PdbCombo");
-            DropForeignKey("dbo.PdbFoodMeterials", "IDFood", "dbo.PdbFoods");
-            DropForeignKey("dbo.PdbFoodMeterials", "IDMeterial", "dbo.PdbMeterials");
-            DropForeignKey("dbo.PdbFoodCombo", "IDFood", "dbo.PdbFoods");
-            DropIndex("dbo.PdbFoodMeterials", new[] { "IDMeterial" });
-            DropIndex("dbo.PdbFoodMeterials", new[] { "IDFood" });
-            DropIndex("dbo.PdbFoodCombo", new[] { "IDFood" });
-            DropIndex("dbo.PdbFoodCombo", new[] { "IDCombo" });
             DropTable("dbo.PdbUser");
             DropTable("dbo.PdbRestaurants");
-            DropTable("dbo.PdbFeedbacks");
-            DropTable("dbo.PdbContacts");
-            DropTable("dbo.PdbMeterials");
-            DropTable("dbo.PdbFoodMeterials");
             DropTable("dbo.PdbFoods");
-            DropTable("dbo.PdbFoodCombo");
-            DropTable("dbo.PdbCombo");
+            DropTable("dbo.PdbFeedbacks");
+            DropTable("dbo.PdbBookTables");
             DropTable("dbo.PdbBanners");
         }
     }

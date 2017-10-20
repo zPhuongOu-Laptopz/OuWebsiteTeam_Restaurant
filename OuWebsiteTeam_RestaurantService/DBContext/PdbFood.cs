@@ -8,21 +8,11 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
 
     public partial class PdbFood
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PdbFood()
-        {
-
-        }
-
         public Guid ID { get; set; }
 
         [Required]
         [StringLength(100)]
         public string NameFood { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string Type { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -66,5 +56,9 @@ namespace OuWebsiteTeam_RestaurantService.DBContext
         public int ViewCount { get; set; }
 
         public int BuyCount { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Type { get; set; }
     }
 }

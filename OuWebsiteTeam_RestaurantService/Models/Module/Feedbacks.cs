@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using OuWebsiteTeam_RestaurantService.InterfaceEx.Module;
 using OuWebsiteTeam_RestaurantService.DBContext;
+using System.Linq;
 
 namespace OuWebsiteTeam_RestaurantService.Models.Module
 {
@@ -39,7 +40,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
 
         public PdbFeedback GetOne(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.PdbFeedbacks.SingleOrDefault(item => item.ID == id);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace OuWebsiteTeam_RestaurantService.DBContext
+namespace OuWebsiteTeam_RestaurantService.DBContext
 {
     using System;
     using System.Collections.Generic;
@@ -8,34 +8,31 @@
 
     public partial class PdbBookTable
     {
-        [Key]
         public Guid ID { get; set; }
 
-        [Required(ErrorMessage ="Bạn chưa nhập tên")]
+        [Required]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Bạn chưa nhập tên")]
+        [Required]
         [StringLength(50)]
-        public string LastName  { get; set; }
+        public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Bạn chưa nhập số điện thoại")]
+        [Required]
         [StringLength(15)]
         public string Phone { get; set; }
 
         [StringLength(100)]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Bạn chưa nhập số người")]
         public int NumberPerson { get; set; }
 
-        [Required(ErrorMessage = "Bạn chưa nhập loại phòng")]
+        [Required]
         [StringLength(100)]
         public string TypeRoom { get; set; }
 
-        [Required(ErrorMessage = "Bạn chưa nhập thời gian")]
         public DateTime Time { get; set; }
-        
+
         public string Note { get; set; }
     }
 }

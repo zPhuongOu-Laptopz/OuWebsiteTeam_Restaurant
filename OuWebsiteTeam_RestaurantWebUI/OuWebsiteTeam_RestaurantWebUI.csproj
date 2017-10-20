@@ -263,7 +263,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BannerController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\FeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\FoodController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
@@ -1596,9 +1595,7 @@
     <Content Include="Content\assets\admin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\assets\admin\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Areas\Admin\Views\RestaurantInfo\Add.cshtml" />
-    <Content Include="Areas\Admin\Views\Contact\Add.cshtml" />
     <Content Include="Areas\Admin\Views\User\Add.cshtml" />
-    <Content Include="Areas\Admin\Views\Feedback\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Food\Add.cshtml" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\OuWebsiteTeam_RestaurantService.dll.config" />
@@ -1636,7 +1633,6 @@
     <Content Include="Areas\Admin\Views\Food\Update.cshtml" />
     <Content Include="Areas\HomePage\Views\Menu\Menu.cshtml" />
     <Content Include="Areas\HomePage\Views\Layout\Layout_Full_Width.cshtml" />
-    <Content Include="Areas\HomePage\Views\Feedback\Feedback.cshtml" />
     <Content Include="Areas\HomePage\Views\Contact\Contact.cshtml" />
     <Content Include="Areas\HomePage\Views\Layout\Layout_Page.cshtml" />
     <Content Include="Content\assets\less\component-animations.less" />
@@ -1689,10 +1685,12 @@
     <Content Include="Content\assets\menufood\fonts\codropsicons\codropsicons.eot" />
     <Content Include="Content\assets\menufood\fonts\codropsicons\codropsicons.ttf" />
     <Content Include="Content\assets\menufood\fonts\codropsicons\codropsicons.woff" />
-    <Content Include="Areas\HomePage\Views\Feedback\Test.cshtml" />
     <Content Include="Areas\Admin\Views\Banner\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Banner\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Banner\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Feedback\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Feedback\Details.cshtml" />
+    <Content Include="Areas\HomePage\Views\Feedback\Feedback.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
