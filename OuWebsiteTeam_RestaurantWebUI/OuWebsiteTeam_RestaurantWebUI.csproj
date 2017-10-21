@@ -263,11 +263,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BannerController.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
-=======
+
     <Compile Include="Areas\Admin\Controllers\BookTableController.cs" />
->>>>>>> bcd37614808b7b0871fbb39dada57d6069dbf3bd
+
     <Compile Include="Areas\Admin\Controllers\FeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\FoodController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
@@ -1697,13 +1697,13 @@
     <Content Include="Areas\Admin\Views\Feedback\List.cshtml" />
     <Content Include="Areas\Admin\Views\Feedback\Details.cshtml" />
     <Content Include="Areas\HomePage\Views\Feedback\Feedback.cshtml" />
-<<<<<<< HEAD
+
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
-=======
+
     <Content Include="Areas\HomePage\Views\BookTable\Booking.cshtml" />
     <Content Include="Areas\Admin\Views\BookTable\List.cshtml" />
     <Content Include="Areas\Admin\Views\BookTable\Details.cshtml" />
->>>>>>> bcd37614808b7b0871fbb39dada57d6069dbf3bd
+
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />

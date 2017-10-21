@@ -92,12 +92,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OuWebsiteTeam_RestaurantWebUI\OuWebsiteTeam_RestaurantWebUI.csproj">
-      <Project>{5A0CE3AA-B260-4540-89F9-565983983A99}</Project>
-      <Name>OuWebsiteTeam_RestaurantWebUI</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
