@@ -69,6 +69,7 @@ namespace OuWebsiteTeam_RestaurantWebUI.App_Start
             kernel.Bind<IBanners>().To<Banners>();
             kernel.Bind<IFeedbacks>().To<Feedbacks>();
             kernel.Bind<IFoods>().To<Foods>();
+            kernel.Bind<IBookTable>().To<BookTable>();
         }        
     }
 }
