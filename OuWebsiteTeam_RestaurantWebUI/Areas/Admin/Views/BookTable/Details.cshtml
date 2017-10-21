@@ -1,0 +1,82 @@
+﻿@model OuWebsiteTeam_RestaurantService.DBContext.PdbBookTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Layout/Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PdbBookTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeRoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
