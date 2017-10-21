@@ -91,19 +91,19 @@
 
                         <!-- .nav -->
                         <ul class="nav navbar-nav">
-                            <li> <a href="dashboard.html">Dashboard</a>  </li>
-                            <li> <a href="table.html">Tables</a>  </li>
-                            <li> <a href="file.html">File Manager</a>  </li>
+                            <li> <a href="@Url.Action("Index","Dashboard")">Dashboard</a>  </li>
+                            @*<li> <a href="@Url.Action("","")">Tables</a>  </li>*@
+                            <li> <a href="@Url.Action("Login","Login")">Login</a>  </li>
                             <li class='dropdown '>
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Form Elements
+                                    Table
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li> <a href="form-general.html">General</a>  </li>
-                                    <li> <a href="form-validation.html">Validation</a>  </li>
-                                    <li> <a href="form-wysiwyg.html">WYSIWYG</a>  </li>
-                                    <li> <a href="form-wizard.html">Wizard &amp; File Upload</a>  </li>
+                                    <li> <a href="@Url.Action("List","Banner")">Banner</a>  </li>
+                                    <li> <a href="@Url.Action("Add","RestaurantInfo")">Restaurant</a>  </li>
+                                    @*<li> <a href="form-wysiwyg.html">WYSIWYG</a>  </li>
+                                    <li> <a href="form-wizard.html">Wizard &amp; File Upload</a>  </li>*@
                                 </ul>
                             </li>
                         </ul><!-- /.nav -->
@@ -166,7 +166,7 @@
                 <li class="nav-header">Menu</li>
                 <li class="nav-divider"></li>
                 <li class="">
-                    <a href="@Url.Action("Index" , "Admin")">
+                    <a href="@Url.Action("Index" , "Dashboard")">
                         <!-- <i class="fa fa-dashboard"></i> -->
                         <span class="glyphicon glyphicon-home"></span>
                         <span class="link-title">&nbsp; Dashboard</span>
@@ -182,11 +182,31 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="@Url.Action("List","Meterial")">
-                                <span class="glyphicon glyphicon-flash"></span>&nbsp; Meterial
+                            <a href="@Url.Action("List","Banner")">
+                                <span class="glyphicon glyphicon-flash"></span>&nbsp; Banner
                             </a>
                         </li>
+                        @*<li>
+                            <a href="@Url.Action("List","Food")">
+                                <span class="glyphicon glyphicon-flash"></span>&nbsp; Food
+                            </a>
+                        </li>*@
                         <li>
+                            <a href="@Url.Action("Add","RestaurantInfo")">
+                                <span class="glyphicon glyphicon-flash"></span>&nbsp; Restaurant Info
+                            </a>
+                        </li>
+                        @*<li>
+                            <a href="@Url.Action("Add","User")">
+                                <span class="glyphicon glyphicon-flash"></span>&nbsp; User
+                            </a>
+                        </li>*@
+                        @*<li>
+                            <a href="@Url.Action("List","Login")">
+                                <span class="glyphicon glyphicon-flash"></span>&nbsp; Login
+                            </a>
+                        </li>*@
+                        @*<li>
                             <a href="@Url.Action("Test","Admin")">
                                 <span class="glyphicon glyphicon-flash"></span>&nbsp; Test
                             </a>
@@ -200,10 +220,10 @@
                             <a href="@Url.Action("Test2","Admin")">
                                 <span class="glyphicon glyphicon-flash"></span>&nbsp; Test2
                             </a>
-                        </li>
+                        </li>*@
                     </ul>
                 </li>
-                <li>
+                @*<li>
                     <a href="file.html">
                         <span class="glyphicon glyphicon-file"></span>
                         <span class="link-title">
@@ -288,7 +308,7 @@
                             &nbsp; Blank Page
                         </span>
                     </a>
-                </li>
+                </li>*@
                 <li class="nav-divider"></li>
                 <li>
                     <a href="@Url.Action("Login","Login")">

@@ -13,11 +13,8 @@
                 <div class="col-md-12">
                     <div class="box">
                         <header>
-                            <h5>Table</h5>
+                            <h5>Banner</h5>
                         </header>
-                        <p>
-                            @Html.ActionLink("Create New", "Add")
-                        </p>
                         <div id="sortableTable" class="body collapse in">
                             <table class="table table-bordered sortableTable responsive-table">
                                 <thead>
@@ -29,7 +26,9 @@
                                             @Html.DisplayNameFor(model => model.Link)
                                         </th>
                                         <th></th>
-                                        <th><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></th>
+                                        <th><a href="#"><span class="glyphicon glyphicon-plus-sign"></span>
+                                            @Html.ActionLink("Create New", "Add")</a>
+                                        </th>
                                     </tr>                                    
                                 </thead>
                                 <tbody>
@@ -61,4 +60,4 @@
                 </div>
             </div><!-- /.inner -->
         </div><!-- /.outer -->
-    </div><!-- /#content -->
+    </div>
