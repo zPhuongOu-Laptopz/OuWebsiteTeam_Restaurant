@@ -14,5 +14,10 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.HomePage.Controllers
             ViewBag.Title = "Media";
             return View();            
         }
+
+        public ActionResult Image()
+        {
+            return View();
+        }
     }
 }

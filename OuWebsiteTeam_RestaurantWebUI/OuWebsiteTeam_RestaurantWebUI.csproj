@@ -263,11 +263,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BannerController.cs" />
-
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
-
     <Compile Include="Areas\Admin\Controllers\BookTableController.cs" />
-
     <Compile Include="Areas\Admin\Controllers\FeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\FoodController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
@@ -1697,13 +1694,16 @@
     <Content Include="Areas\Admin\Views\Feedback\List.cshtml" />
     <Content Include="Areas\Admin\Views\Feedback\Details.cshtml" />
     <Content Include="Areas\HomePage\Views\Feedback\Feedback.cshtml" />
-
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
-
     <Content Include="Areas\HomePage\Views\BookTable\Booking.cshtml" />
     <Content Include="Areas\Admin\Views\BookTable\List.cshtml" />
     <Content Include="Areas\Admin\Views\BookTable\Details.cshtml" />
-
+    <Content Include="Areas\HomePage\Views\Menu\Breakfast.cshtml" />
+    <Content Include="Areas\HomePage\Views\Menu\Lunch.cshtml" />
+    <Content Include="Areas\HomePage\Views\Menu\Dinner.cshtml" />
+    <Content Include="Areas\HomePage\Views\Menu\Desserts.cshtml" />
+    <Content Include="Areas\HomePage\Views\Menu\Drinks.cshtml" />
+    <Content Include="Areas\HomePage\Views\Media\Image.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />

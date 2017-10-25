@@ -15,13 +15,13 @@ namespace OuWebsiteTeam_RestaurantWebUI.Areas.HomePage.Controllers
 
         // GET: HomePage/Feedback       
         [HttpGet]
-        public ActionResult Feedback()
+        public ActionResult Feedback() //Add
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Feedback(PdbFeedback feed)
+        public ActionResult Feedback(PdbFeedback feed) //Add
         {
             if (feed.NumberStar < 0 || feed.NumberStar > 5)
             {

@@ -15,6 +15,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
             this._context = context;
         }
 
+        // Code thêm 1 phản hồi.
         public bool Create(PdbFeedback fe)
         {
             fe.ID = Guid.NewGuid();
@@ -33,6 +34,7 @@ namespace OuWebsiteTeam_RestaurantService.Models.Module
             throw new NotImplementedException();
         }
 
+        // Code trả ra list tất cả các phản hồi của kh
         public IEnumerable<PdbFeedback> GetAll()
         {
             return this._context.PdbFeedbacks;
