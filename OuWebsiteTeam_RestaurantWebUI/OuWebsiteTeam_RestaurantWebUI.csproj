@@ -1565,6 +1565,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\MonAn\MonChay\Mon1.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon2.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon3.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon4.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon5.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon6.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon7.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon8.jpg" />
+    <Content Include="Content\images\MonAn\MonChay\Mon9.jpg" />
     <Content Include="Content\np-assets\images\logoteam.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1766,7 +1775,6 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\HomePage\Models\" />
     <Folder Include="Areas\HomePage\Views\Shared\" />
-    <Folder Include="Content\images\" />
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
