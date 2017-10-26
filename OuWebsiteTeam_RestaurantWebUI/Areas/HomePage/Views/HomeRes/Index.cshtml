@@ -1,199 +1,253 @@
-﻿
+﻿@model OuWebsiteTeam_RestaurantService.DBContext.PdbFood
+
 @{
-    ViewBag.Title = "Breakfast";
-    Layout = "~/Areas/HomePage/Views/Layout/Layout_Full_Width.cshtml";
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/HomePage/Views/Layout/Layout_.cshtml";
 }
 
-<!-- Breadcrumb -->
-<div class="row page-name">
-    <h1>Breakfast</h1>
-    <div class="col-md-6 col-md-offset-3">
-        <ol class="breadcrumb">
-            <li><a href="@Url.Action("Index","HomeRes")">Home</a></li>
-            <li><a href="@Url.Action("Breakfast","Menu")">Menu</a></li>
-        </ol>
+<!-- Banner -->
+<div class="row">
+    <img src="~/Content/assets/imgs/posters/poster.jpg" height="50%" alt="poster.jpg">
+</div>
+
+<!-- Service -->
+<div class="row service">
+    <div class="col-md-12">
+        <ul id="sti-menu" class="sti-menu">
+            <li data-hovercolor="#37c5e9">
+                <a href="@Url.Action("Booking","BookTable")">
+                    <h2 data-type="mText" class="sti-item">Advanced Patient Care</h2>
+                    <h3 data-type="sText" class="sti-item">Personalized to your needs</h3>
+                    <span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+                </a>
+            </li>
+            <li data-hovercolor="#ff395e">
+                <a href="@Url.Action("Booking","BookTable")">
+                    <h2 data-type="mText" class="sti-item">Alternative Medicine</h2>
+                    <h3 data-type="sText" class="sti-item">Holistic approaches</h3>
+                    <span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+                </a>
+            </li>
+            <li data-hovercolor="#57e676">
+                <a href="@Url.Action("Booking","BookTable")">
+                    <h2 data-type="mText" class="sti-item">Modern Info Center</h2>
+                    <h3 data-type="sText" class="sti-item">Educating you</h3>
+                    <span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+                </a>
+            </li>
+            <li data-hovercolor="#d869b2">
+                <a href="@Url.Action("Booking","BookTable")">
+                    <h2 data-type="mText" class="sti-item">Future Family Planning</h2>
+                    <h3 data-type="sText" class="sti-item">For a healthier future</h3>
+                    <span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+                </a>
+            </li>
+            <li data-hovercolor="#ffdd3f">
+                <a href="@Url.Action("Booking","BookTable")">
+                    <h2 data-type="mText" class="sti-item">Advanced Technology</h2>
+                    <h3 data-type="sText" class="sti-item">From the latest research</h3>
+                    <span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 
-<div class="container">
-    <!-- Menu food-->
+<!-- Menu food-->
+@using (Ajax.BeginForm("LoadData", "HomeRes", FormMethod.Get, null))
+{
     <div class="row menu-food">
         <div class="col-md-12">
+            <h1>Thực Đơn</h1>
             <section class="color-1">
                 <nav class="cl-effect-8">
-                    <a href="#">Món Chay</a>
-                    <a href="#">Món Mặn</a>
-                    <a href="#">Combo</a>
-                    <a href="#">Tráng Miệng</a>
-                    <a href="#">Thức Uống</a>
+                    @*<input type="submit" alt="Bữa Sáng" value="Bữa Sáng"/>*@
+                    <a href="@Url.Action("Breakfast","Menu")">Điểm tâm</a>
+                    <a href="@Url.Action("Lunch","Menu")">Bữa Trưa</a>
+                    <a href="@Url.Action("Dinner","Menu")">Ăn tối</a>
+                    <a href="@Url.Action("Desserts","Menu")">Bánh-Kem</a>
+                    <a href="@Url.Action("Drinks","Menu")">Thức Uống</a>
                 </nav>
             </section>
         </div>
     </div>
 
-    <!-- Food -->
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon1.jpg" />
+    <div class="col-xs-12 col-sm-6 col-md-6 food">
+        <div class="thumbnail clearfix">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-1.png" />
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h3>Món ăn 1</h3>
+                <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-warning">M: $15</span></h3>
                 </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-danger">L: $100</span></h3>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon2.jpg" />
+    <div class="col-xs-12 col-sm-6 col-md-6 food">
+        <div class="thumbnail clearfix">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-1.png" />
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h3>Món ăn 1</h3>
+                <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-warning">M: $15</span></h3>
                 </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 200$</span>
-                    </div>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-danger">L: $100</span></h3>
                 </div>
             </div>
         </div>
+    </div>
+}
 
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon3.jpg" />
+<!-- Food -->
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 food">
+        <div class="thumbnail clearfix">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-1.png" />
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h3>Món ăn 1</h3>
+                <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-warning">M: $15</span></h3>
                 </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 2000$</span>
-                    </div>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-danger">L: $100</span></h3>
                 </div>
             </div>
         </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon4.jpg" />
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 food">
+        <div class="thumbnail clearfix">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-1.png" />
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h3>Món ăn 1</h3>
+                <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-warning">M: $15</span></h3>
                 </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-danger">L: $100</span></h3>
                 </div>
             </div>
         </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon5.jpg" />
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 food">
+        <div class="thumbnail clearfix">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-1.png" />
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h3>Món ăn 1</h3>
+                <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-warning">M: $15</span></h3>
                 </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-danger">L: $100</span></h3>
                 </div>
             </div>
         </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon6.jpg" />
-                </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
-                </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 food">
+        <div class="thumbnail clearfix">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-1.png" />
             </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon7.jpg" />
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h3>Món ăn 1</h3>
+                <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-warning">M: $15</span></h3>
                 </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon8.jpg" />
-                </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 food">
-            <div class="thumbnail clearfix">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="~/Content/images/MonAn/MonChay/Mon9.jpg" />
-                </div>
-                <div class="col-md-12">
-                    <h3>Món ăn 1</h3>
-                    <p class="description">
-                        Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.
-                    </p>
-                    <div class="col-md-12 price-menu">
-                        <span class="label label-warning">M: 10$</span>
-                        <span class="label label-danger">L: 20$</span>
-                    </div>
+                <div class="price col-sm-12 col-md-6">
+                    <h3><span class="label label-danger">L: $100</span></h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
+<!-- Best sell -->
+<div class="row best-sell">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="col-sm-6 col-md-6">
+            <h1>Món ăn bán chạy nhất</h1>
+            <div style="width:10%; height:1px; background:black; float:left;"></div>
+            <div class="offer">
+                Best Offer
+            </div>
+            <p class="description">Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản.</p>
+            <div class="page-header">
+                <h2><span class="size">M: </span><small><strike>$20</strike></small> $15</h2>
+                <h2><span class="size">L: </span><small><strike>$25</strike></small> $20</h2>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6">
+            <img src="~/Content/assets/imgs/products/product-7.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Comment -->
+<div class="row comment">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="col-sm-6 col-md-6 comment-post">
+            <div class="col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-5.jpg" class="img-circle" atl="">
+            </div>
+
+            <div class="col-sm-7 col-md-6">
+                <h3>User 1</h3>
+                <p>"Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản."</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 comment-post">
+            <div class="col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-5.jpg" class="img-circle" atl="">
+            </div>
+
+            <div class="col-sm-7 col-md-6">
+                <h3>User 2</h3>
+                <p>"Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản."</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 comment-post">
+            <div class="col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-5.jpg" class="img-circle" atl="">
+            </div>
+
+            <div class="col-sm-7 col-md-6">
+                <h3>User 3</h3>
+                <p>"Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản."</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 comment-post">
+            <div class="col-sm-5 col-md-6">
+                <img src="~/Content/assets/imgs/products/product-5.jpg" class="img-circle" atl="">
+            </div>
+
+            <div class="col-sm-7 col-md-6">
+                <h3>User 4</h3>
+                <p>"Chỉ đơn giản là văn bản giả của ngành in và sắp chữ Chỉ đơn giản là văn bản Chỉ đơn giản là văn bản."</p>
+            </div>
+        </div>
+    </div>
+</div>

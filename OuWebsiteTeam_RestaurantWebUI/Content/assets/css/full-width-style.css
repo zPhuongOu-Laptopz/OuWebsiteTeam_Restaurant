@@ -1,6 +1,9 @@
 ﻿.b{
     background:none;
 }
+.toggle-button {    
+    display:block;
+}
 
 .a{
     display:none;

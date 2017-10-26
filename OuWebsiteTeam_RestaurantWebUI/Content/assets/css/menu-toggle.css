@@ -1,21 +1,21 @@
-﻿.toggle-button{
-    z-index:50;
-    height:1px;
-    position:absolute;
-    position:fixed;
+﻿.toggle-button {    
+    z-index: 50;
+    height: 1px;
+    position: absolute;
+    position: fixed;
 }
 
-.toggle-button .glyphicon {
-    width: 70%;
-    background: white;
-    display: block;
-    padding: 15%;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-}
+    .toggle-button .glyphicon {
+        width: 70%;
+        background: white;
+        display: block;
+        padding: 15%;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+    }
 
 .a {
     position: absolute;
